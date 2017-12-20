@@ -1,0 +1,7 @@
+C:\ohjelmointi\BI\BIA!\BIA!\bin\Debug\BIA!.exe.config
+C:\ohjelmointi\BI\BIA!\BIA!\bin\Debug\BIA!.exe
+C:\ohjelmointi\BI\BIA!\BIA!\bin\Debug\BIA!.pdb
+C:\ohjelmointi\BI\BIA!\BIA!\obj\Debug\BIA!.csprojResolveAssemblyReference.cache
+C:\ohjelmointi\BI\BIA!\BIA!\obj\Debug\BIA!.csproj.CoreCompileInputs.cache
+C:\ohjelmointi\BI\BIA!\BIA!\obj\Debug\BIA!.exe
+C:\ohjelmointi\BI\BIA!\BIA!\obj\Debug\BIA!.pdb
