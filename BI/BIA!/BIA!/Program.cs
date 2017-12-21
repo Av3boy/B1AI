@@ -8,57 +8,59 @@ namespace BIA_
 {
     class Program
     {
-
-        string userinput = Console.ReadLine();
-
-        static void Main(string[] args)
+        public static void Main()
         {
+            string welcome = ("Hello! My name is B1, i am programmed to serve as an allpurpose program.");
+            string question = ("How can i help? Type /HELP to see available commands.");
+            Console.WriteLine(welcome);
+            Console.WriteLine(question);
+            Program.Commands();
 
-            Console.WriteLine("hello! My name is B1, i am programmed to serve as an allpurpose program.");
-            Console.WriteLine("How can i help? /n Type HELP to see possible commands.");
-
-            Commands();
-
-            #region
-
-            if (Console.ReadKey(true).Key == ConsoleKey.Escape)
+            /*var key = Console.ReadKey();
+            if (key.Key == ConsoleKey.Escape)
             {
-
-                Console.WriteLine("Are you sure you want to close the program. /n Press Y to close, Press N to cancel.");
-
-                if (Console.ReadKey(true).Key == ConsoleKey.Y)
-                    Environment.Exit(0);
-
-                else if(Console.ReadKey(true).Key == ConsoleKey.N)
-                {
-
-                    Commands();
-
-                }
-
+                Environment.Exit(0);
             }
+            */
 
-            #endregion
+        }
 
+
+
+        public static void Quit()
+        {
+                Console.WriteLine("Are you sure you want to close the program. Press Y to close, Press N to cancel.");
+
+            if (Console.ReadKey(true).Key == ConsoleKey.Y)
+                Environment.Exit(0);
+
+            else
+                Console.Clear();
+                Program.Main();
         }
 
         public static void Commands()
         {
-
+          
             String command;
             Boolean quitNow = false;
-
+            
             while (!quitNow)
             {
                 command = Console.ReadLine();
                 switch (command)
                 {
+                    case "/clear":
+                        Console.Clear();
+                        Program.Main();
+                        break;
+
                     case "/help":
-                        Commands();
+                        Program.commands();
                         break;
 
                     case "/version":
-                        Console.WriteLine("This should be version.");
+                        Console.WriteLine("V 0.1.0");
                         break;
 
                     case "/quit":
@@ -81,25 +83,18 @@ namespace BIA_
 
         }
 
-        void Commands(string _commands)
+        public static void commands()
         {
-
-            List<string> commands = new List<string>{ "/help", "/version", "/quit", "/time", "/cal" };
-
-            Console.WriteLine(commands);
-
-            foreach (string command in commands)
+            string[] commands = new string[6] { "/help", "/version", "/quit", "/time", "/cal", "/clear" };
+            foreach (string s in commands)
             {
-
-                
-
+                Console.WriteLine(s);                
             }
 
         }
 
         public static void Calculator()
-        {
-
+        {           
             int first;
             int second;
             int answer;
