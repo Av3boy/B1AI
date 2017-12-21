@@ -16,18 +16,6 @@ namespace BIA_
 
         }
 
-        public static void Quit()
-        {
-                Console.WriteLine("Are you sure you want to close the program. Press Y to close, Press N to cancel.");
-
-            if (Console.ReadKey(true).Key == ConsoleKey.Y)
-                Environment.Exit(0);
-
-            else
-                Console.Clear();
-                Program.Main();
-        }
-
         public static void Commands()
         {
           
@@ -53,7 +41,7 @@ namespace BIA_
                         break;
 
                     case "/quit":
-                        quitNow = true;
+                        Quit();
                         break;
 
                     case "/time":
@@ -68,6 +56,22 @@ namespace BIA_
                         Console.WriteLine("Unknown Command " + command);
                         break;
                 }
+            }
+
+        }
+
+        public static void Quit()
+        {
+            Console.WriteLine("Are you sure you want to close the program. Press Y to close, Press N to cancel.");
+
+            if (Console.ReadKey(true).Key == ConsoleKey.Y)
+                Environment.Exit(0);
+
+            else if(Console.ReadKey(true).Key == ConsoleKey.N)
+            {
+
+                Program.Main();
+
             }
 
         }
