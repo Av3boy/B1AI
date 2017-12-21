@@ -10,22 +10,11 @@ namespace BIA_
     {
         public static void Main()
         {
-            string welcome = ("Hello! My name is B1, i am programmed to serve as an allpurpose program.");
-            string question = ("How can i help? Type /HELP to see available commands.");
-            Console.WriteLine(welcome);
-            Console.WriteLine(question);
+            Console.WriteLine("Hello! My name is B1, i am programmed to serve as an allpurpose program.");
+            Console.WriteLine("How can i help? Type /HELP to see available commands.");
             Program.Commands();
 
-            /*var key = Console.ReadKey();
-            if (key.Key == ConsoleKey.Escape)
-            {
-                Environment.Exit(0);
-            }
-            */
-
         }
-
-
 
         public static void Quit()
         {
