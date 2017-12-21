@@ -5,3 +5,10 @@ C:\ohjelmointi\BI\BIA!\BIA!\obj\Debug\BIA!.csprojResolveAssemblyReference.cache
 C:\ohjelmointi\BI\BIA!\BIA!\obj\Debug\BIA!.csproj.CoreCompileInputs.cache
 C:\ohjelmointi\BI\BIA!\BIA!\obj\Debug\BIA!.exe
 C:\ohjelmointi\BI\BIA!\BIA!\obj\Debug\BIA!.pdb
+C:\Git\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.exe.config
+C:\Git\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.exe
+C:\Git\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.pdb
+C:\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csprojResolveAssemblyReference.cache
+C:\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csproj.CoreCompileInputs.cache
+C:\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.exe
+C:\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.pdb
