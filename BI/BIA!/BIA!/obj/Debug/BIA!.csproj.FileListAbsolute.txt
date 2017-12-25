@@ -12,3 +12,10 @@ C:\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csprojResolveAssemblyReference.cache
 C:\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csproj.CoreCompileInputs.cache
 C:\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.exe
 C:\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.pdb
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.exe.config
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.exe
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.pdb
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csprojResolveAssemblyReference.cache
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csproj.CoreCompileInputs.cache
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.exe
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.pdb
