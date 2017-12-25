@@ -3,13 +3,9 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-<<<<<<< HEAD
 using System.Threading;
 using System.Diagnostics;
-//using HtmlAgilityPack;
-=======
 using System.Threading.Tasks;
->>>>>>> 0fd1e395d30517cd993597918b7ef9adc483b173
 using System.Net;
 using System.Media;
 
@@ -76,6 +72,10 @@ namespace BIA_
                 command = Console.ReadLine();
                 switch (command)
                 {
+                    case "/google":
+                        Program.google();
+                        break;
+
                     case "/changeusername":
                         string path = @"C:\Users\" + GetUsername + @"\B1config.txt";
                         File.Delete(path);
@@ -88,7 +88,7 @@ namespace BIA_
                         Program.Main();
                         break;
 
-                    case "/yt":
+                    case "/youtube":
                         Program.youtube();
                         break;
 
@@ -193,19 +193,21 @@ namespace BIA_
         public static void youtube()
         {
 
-            string ytSearch = Console.ReadLine();
+            Console.WriteLine("Enter search word:");
 
-            Console.WriteLine("Enter search word: ");
+            string searchInput = Console.ReadLine();
+            Process.Start("https://www.youtube.com/results?search_query=" + searchInput);
 
 
         }
 
-        public void google()
+        public static void google()
         {
 
-            string searchInput = Console.ReadLine();
+            Console.WriteLine("Enter search word:");
 
-            Console.WriteLine("Enter search word");
+            string searchInput = Console.ReadLine();
+            Process.Start("https://www.google.fi/search?q=" + searchInput);
 
         }
 
