@@ -1,38 +1,82 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HtmlAgilityPack;
+using System.Net;
 
 namespace BIA_
 {
     class Program
     {
+        public static void youtube()
+        {
+            
+        }
+            public static string GetUsername = Environment.UserName;
+            public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
         public static void Main()
         {
-            Console.WriteLine("Hello! My name is B1, i am programmed to serve as an allpurpose program.");
-            Console.WriteLine("How can i help? Type /HELP to see available commands.");
-            Program.Commands();
+            Welcome();
+            Commands();
 
         }
+        public static void Welcome()
+        {
+            if (!File.Exists(configpath))
+            {
+                Console.WriteLine("Hello! My name is B1, i am programmed to serve as an allpurpose program.");
+                Console.WriteLine("How can i help? Type /HELP to see available commands.");
+                Console.WriteLine("But first, i wan't to know your name: ");
+                string usernametosave = Console.ReadLine();
+                using (var tw = new StreamWriter(configpath, true))
+                {
+                    tw.WriteLine(usernametosave);
+                    tw.Close();
+                    Console.Clear();
+                    Program.Main();
+                }
+            }
 
+            if (File.Exists(configpath))
+            {
+                string username = File.ReadLines(configpath).First();
+                Console.WriteLine("Hello " + username + "! How i can help today ?");
+                Console.WriteLine("As you already know, type /help to see available commands.");
+                Commands();
+            }
+        }
         public static void Commands()
         {
-          
+
             String command;
             Boolean quitNow = false;
-            
+
             while (!quitNow)
             {
                 command = Console.ReadLine();
                 switch (command)
                 {
+                    case "/changeusername":
+                        string path = @"C:\Users\" + GetUsername + @"\B1config.txt";
+                        File.Delete(path);
+                        Console.Clear();
+                        Program.Welcome();
+                        break;
+
                     case "/clear":
                         Console.Clear();
                         Program.Main();
                         break;
 
+                    case "/yt":
+                        Program.youtube();
+                        break;
+
                     case "/help":
+                        Console.WriteLine();
                         Program.commands();
                         break;
 
@@ -67,27 +111,26 @@ namespace BIA_
             if (Console.ReadKey(true).Key == ConsoleKey.Y)
                 Environment.Exit(0);
 
-            else if(Console.ReadKey(true).Key == ConsoleKey.N)
+            else if (Console.ReadKey(true).Key == ConsoleKey.N)
             {
 
                 Program.Main();
 
             }
-
         }
 
         public static void commands()
         {
-            string[] commands = new string[6] { "/help", "/version", "/quit", "/time", "/cal", "/clear" };
+            string[] commands = new string[7] { "/help to show this dialog.", "/changeusername to change username.", "/version to show current version.", "/quit to close application.", "/time to show current time.", "/cal to open calculator.", "/clear to reset this window." };
             foreach (string s in commands)
             {
-                Console.WriteLine(s);                
+                Console.WriteLine(s);
             }
 
         }
 
         public static void Calculator()
-        {           
+        {
             int first;
             int second;
             int answer;
@@ -98,8 +141,8 @@ namespace BIA_
             operation = Console.ReadLine();
             second = Convert.ToInt32(Console.ReadLine());
 
-                switch (operation)
-                {
+            switch (operation)
+            {
 
                 case "/":
                     answer = first / second;
