@@ -4,32 +4,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HtmlAgilityPack;
+//using HtmlAgilityPack;
 using System.Net;
+using System.Media;
 
 namespace BIA_
 {
     class Program
     {
-        public static void youtube()
-        {
-            
-        }
+
             public static string GetUsername = Environment.UserName;
             public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
+
         public static void Main()
         {
+
             Welcome();
+            ConnectToInternet();
             Commands();
 
         }
+
         public static void Welcome()
         {
             if (!File.Exists(configpath))
             {
+
                 Console.WriteLine("Hello! My name is B1, i am programmed to serve as an allpurpose program.");
                 Console.WriteLine("How can i help? Type /HELP to see available commands.");
                 Console.WriteLine("But first, i wan't to know your name: ");
+
                 string usernametosave = Console.ReadLine();
                 using (var tw = new StreamWriter(configpath, true))
                 {
@@ -37,6 +41,7 @@ namespace BIA_
                     tw.Close();
                     Console.Clear();
                     Program.Main();
+
                 }
             }
 
@@ -48,6 +53,13 @@ namespace BIA_
                 Commands();
             }
         }
+        private static void ConnectToInternet()
+        {
+
+            throw new NotImplementedException();
+
+        }
+
         public static void Commands()
         {
 
@@ -121,7 +133,8 @@ namespace BIA_
 
         public static void commands()
         {
-            string[] commands = new string[7] { "/help to show this dialog.", "/changeusername to change username.", "/version to show current version.", "/quit to close application.", "/time to show current time.", "/cal to open calculator.", "/clear to reset this window." };
+            string[] commands = new string[7] { "/help to show this dialog.", "/changeusername to change username.", "/version to show current version.",
+                "/quit to close application.", "/time to show current time.", "/cal to open calculator.", "/clear to reset this window." };
             foreach (string s in commands)
             {
                 Console.WriteLine(s);
@@ -172,5 +185,24 @@ namespace BIA_
             }
 
         }
+        public static void youtube()
+        {
+
+            string ytSearch = Console.ReadLine();
+
+            Console.WriteLine("Enter search word: ");
+
+
+        }
+
+        public void google()
+        {
+
+            string searchInput = Console.ReadLine();
+
+            Console.WriteLine("Enter search word");
+
+        }
+
     }
 }
