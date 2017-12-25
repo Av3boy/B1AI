@@ -5,7 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Diagnostics;
+<<<<<<< HEAD
 //using HtmlAgilityPack;
+=======
+>>>>>>> 5254cd6b5317decda2e7f3f11e63425ffd4cc26e
 using System.Threading.Tasks;
 using System.Net;
 using System.Media;
@@ -73,40 +76,44 @@ namespace BIA_
                 command = Console.ReadLine();
                 switch (command)
                 {
-                    case "/changeusername":
+                    case "google":
+                        Program.google();
+                        break;
+
+                    case "changeusername":
                         string path = @"C:\Users\" + GetUsername + @"\B1config.txt";
                         File.Delete(path);
                         Console.Clear();
                         Program.Welcome();
                         break;
 
-                    case "/clear":
+                    case "clear":
                         Console.Clear();
                         Program.Main();
                         break;
 
-                    case "/yt":
+                    case "youtube":
                         Program.youtube();
                         break;
 
-                    case "/help":
+                    case "help":
                         Console.WriteLine();
                         Program.commands();
                         break;
 
-                    case "/version":
+                    case "version":
                         Console.WriteLine("V 0.1.0");
                         break;
 
-                    case "/quit":
+                    case "exit":
                         Quit();
                         break;
 
-                    case "/time":
+                    case "time":
                         Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt"));
                         break;
 
-                    case "/cal":
+                    case "cal":
                         Calculator();
                         break;
 
@@ -190,19 +197,20 @@ namespace BIA_
         public static void youtube()
         {
 
-            string ytSearch = Console.ReadLine();
+            Console.WriteLine("Enter search word:");
 
-            Console.WriteLine("Enter search word: ");
+            string searchInput = Console.ReadLine();
+            Process.Start("https://www.youtube.com/results?search_query=" + searchInput);
 
 
         }
 
-        public void google()
+        public static void google()
         {
+            Console.WriteLine("Enter search word:");
 
             string searchInput = Console.ReadLine();
-
-            Console.WriteLine("Enter search word");
+            Process.Start("https://www.google.fi/search?q=" + searchInput);
 
         }
 
