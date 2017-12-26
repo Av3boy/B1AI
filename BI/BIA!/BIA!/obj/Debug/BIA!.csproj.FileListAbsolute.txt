@@ -22,3 +22,6 @@ C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.pdb
 C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.dll
 C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.xml
+C:\Git\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.dll
+C:\Git\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.pdb
+C:\Git\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.xml
