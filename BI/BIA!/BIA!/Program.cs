@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Media;
 using HtmlAgilityPack;
+
 namespace BIA_
 {
     class Program
@@ -68,18 +69,18 @@ namespace BIA_
                 command = Console.ReadLine();
                 switch (command)
                 {
-                    case "/google":
+                    case "google":
                         Program.google();
                         break;
 
-                    case "/changeusername":
+                    case "changeusername":
                         string path = @"C:\Users\" + GetUsername + @"\B1config.txt";
                         File.Delete(path);
                         Console.Clear();
                         Program.Welcome();
                         break;
 
-                    case "/clear":
+                    case "clear":
                         Console.Clear();
                         Program.Main();
                         break;
@@ -92,28 +93,28 @@ namespace BIA_
                         Program.youtube();
                         break;
 
-                    case "/help":
+                    case "help":
                         Console.WriteLine();
                         Program.commands();
                         break;
 
-                    case "/version":
+                    case "version":
                         Console.WriteLine("V 0.1.0");
                         break;
 
-                    case "/quit":
+                    case "quit":
                         Quit();
                         break;
 
-                    case "/pornoo":
+                    case "pornoo":
                         Pornoo();
                         break;
 
-                    case "/time":
+                    case "time":
                         Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt"));
                         break;
 
-                    case "/cal":
+                    case "cal":
                         Calculator();
                         break;
 
