@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Net;
 using System.Media;
-
+using HtmlAgilityPack;
 namespace BIA_
 {
     class Program
@@ -86,6 +86,10 @@ namespace BIA_
                     case "clear":
                         Console.Clear();
                         Program.Main();
+                        break;
+
+                    case "asd":
+                        Program.asd();
                         break;
 
                     case "youtube":
@@ -209,6 +213,15 @@ namespace BIA_
             Process.Start("https://www.google.fi/search?q=" + searchInput);
 
         }
-
+        public static void asd()
+        {
+            HtmlWeb web = new HtmlWeb();
+            HtmlDocument document = web.Load("https://www.youtube.com/results?search_query=asd");
+            HtmlNode[] nodes = document.DocumentNode.SelectNodes("//a/slot").ToArray();
+            foreach (HtmlNode item in nodes)
+            {
+                Console.WriteLine(item.InnerHtml);
+            }
+        }
     }
 }
