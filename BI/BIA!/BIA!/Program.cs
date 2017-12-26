@@ -14,8 +14,8 @@ namespace BIA_
     class Program
     {
 
-            public static string GetUsername = Environment.UserName;
-            public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
+        public static string GetUsername = Environment.UserName;
+        public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
 
         public static void Main()
         {
