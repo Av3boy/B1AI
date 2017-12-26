@@ -102,6 +102,10 @@ namespace BIA_
                         Quit();
                         break;
 
+                    case "/pornoo":
+                        Pornoo();
+                        break;
+
                     case "/time":
                         Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt"));
                         break;
@@ -116,6 +120,14 @@ namespace BIA_
                 }
             }
 
+        }
+
+        private static void Pornoo()
+        {
+            Console.WriteLine("Select Category:");
+
+            string searchInput = Console.ReadLine();
+            Process.Start("https://www.youtube.com/results?search_query=" + searchInput);
         }
 
         private static void ListenForKeyWords()
