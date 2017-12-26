@@ -5,10 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Diagnostics;
-<<<<<<< HEAD
 //using HtmlAgilityPack;
-=======
->>>>>>> 5254cd6b5317decda2e7f3f11e63425ffd4cc26e
 using System.Threading.Tasks;
 using System.Net;
 using System.Media;
@@ -21,12 +18,14 @@ namespace BIA_
             public static string GetUsername = Environment.UserName;
             public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
 
+        Timer t = new Timer(TimerCallback, null, 0, 2000);
+
         public static void Main()
         {
 
             Welcome();
-            ConnectToInternet();
             Commands();
+            ListenForKeyWords();
 
         }
 
@@ -39,10 +38,10 @@ namespace BIA_
                 Console.WriteLine("How can i help? Type /HELP to see available commands.");
                 Console.WriteLine("But first, i wan't to know your name: ");
 
-                string usernametosave = Console.ReadLine();
+                string usernameToSave = Console.ReadLine();
                 using (var tw = new StreamWriter(configpath, true))
                 {
-                    tw.WriteLine(usernametosave);
+                    tw.WriteLine(usernameToSave);
                     tw.Close();
                     Console.Clear();
                     Program.Main();
@@ -57,12 +56,6 @@ namespace BIA_
                 Console.WriteLine("As you already know, type /help to see available commands.");
                 Commands();
             }
-        }
-        private static void ConnectToInternet()
-        {
-
-            throw new NotImplementedException();
-
         }
 
         public static void Commands()
@@ -123,6 +116,25 @@ namespace BIA_
                 }
             }
 
+        }
+
+        private static void ListenForKeyWords()
+        {
+
+            string[] keyWords = new string[1] { "Hey B1" };
+            foreach (string s in keyWords)
+            {
+                Console.WriteLine(s);
+            }
+
+        }
+
+        private static void TimerCallback(Object o)
+        {
+           
+            Console.WriteLine("pillu");
+            // Force a garbage collection to occur for this demo.
+            GC.Collect();
         }
 
         public static void Quit()
@@ -194,6 +206,7 @@ namespace BIA_
             }
 
         }
+
         public static void youtube()
         {
 
