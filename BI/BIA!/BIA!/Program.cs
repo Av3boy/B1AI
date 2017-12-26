@@ -5,6 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Diagnostics;
+<<<<<<< HEAD
+//using HtmlAgilityPack;
+=======
+>>>>>>> 3da2effa5c874d7d5414762c6fb3851c71bee089
 using System.Threading.Tasks;
 using System.Net;
 using System.Media;
@@ -17,12 +21,14 @@ namespace BIA_
         public static string GetUsername = Environment.UserName;
         public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
 
+        Timer t = new Timer(TimerCallback, null, 0, 2000);
+
         public static void Main()
         {
 
             Welcome();
-            ConnectToInternet();
             Commands();
+            ListenForKeyWords();
 
         }
 
@@ -35,10 +41,10 @@ namespace BIA_
                 Console.WriteLine("How can i help? Type /HELP to see available commands.");
                 Console.WriteLine("But first, i wan't to know your name: ");
 
-                string usernametosave = Console.ReadLine();
+                string usernameToSave = Console.ReadLine();
                 using (var tw = new StreamWriter(configpath, true))
                 {
-                    tw.WriteLine(usernametosave);
+                    tw.WriteLine(usernameToSave);
                     tw.Close();
                     Console.Clear();
                     Program.Main();
@@ -54,12 +60,6 @@ namespace BIA_
                 Commands();
             }
         }
-        private static void ConnectToInternet()
-        {
-
-            throw new NotImplementedException();
-
-        }
 
         public static void Commands()
         {
@@ -72,48 +72,56 @@ namespace BIA_
                 command = Console.ReadLine();
                 switch (command)
                 {
-                    case "google":
+                    case "/google":
                         Program.google();
                         break;
 
-                    case "changeusername":
+                    case "/changeusername":
                         string path = @"C:\Users\" + GetUsername + @"\B1config.txt";
                         File.Delete(path);
                         Console.Clear();
                         Program.Welcome();
                         break;
 
-                    case "clear":
+                    case "/clear":
                         Console.Clear();
                         Program.Main();
                         break;
 
+<<<<<<< HEAD
+                    case "/youtube":
+=======
                     case "asd":
                         Program.asd();
                         break;
 
                     case "youtube":
+>>>>>>> 3da2effa5c874d7d5414762c6fb3851c71bee089
                         Program.youtube();
                         break;
 
-                    case "help":
+                    case "/help":
                         Console.WriteLine();
                         Program.commands();
                         break;
 
-                    case "version":
+                    case "/version":
                         Console.WriteLine("V 0.1.0");
                         break;
 
-                    case "exit":
+                    case "/quit":
                         Quit();
                         break;
 
-                    case "time":
+                    case "/pornoo":
+                        Pornoo();
+                        break;
+
+                    case "/time":
                         Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt"));
                         break;
 
-                    case "cal":
+                    case "/cal":
                         Calculator();
                         break;
 
@@ -123,6 +131,33 @@ namespace BIA_
                 }
             }
 
+        }
+
+        private static void Pornoo()
+        {
+            Console.WriteLine("Select Category:");
+
+            string searchInput = Console.ReadLine();
+            Process.Start("https://www.youtube.com/results?search_query=" + searchInput);
+        }
+
+        private static void ListenForKeyWords()
+        {
+
+            string[] keyWords = new string[1] { "Hey B1" };
+            foreach (string s in keyWords)
+            {
+                Console.WriteLine(s);
+            }
+
+        }
+
+        private static void TimerCallback(Object o)
+        {
+           
+            Console.WriteLine("pillu");
+            // Force a garbage collection to occur for this demo.
+            GC.Collect();
         }
 
         public static void Quit()
@@ -194,6 +229,7 @@ namespace BIA_
             }
 
         }
+
         public static void youtube()
         {
 
@@ -207,6 +243,7 @@ namespace BIA_
 
         public static void google()
         {
+
             Console.WriteLine("Enter search word:");
 
             string searchInput = Console.ReadLine();
