@@ -5,14 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Diagnostics;
-<<<<<<< HEAD
-//using HtmlAgilityPack;
-=======
->>>>>>> 3da2effa5c874d7d5414762c6fb3851c71bee089
 using System.Threading.Tasks;
 using System.Net;
 using System.Media;
 using HtmlAgilityPack;
+
 namespace BIA_
 {
     class Program
@@ -88,15 +85,11 @@ namespace BIA_
                         Program.Main();
                         break;
 
-<<<<<<< HEAD
-                    case "/youtube":
-=======
                     case "asd":
                         Program.asd();
                         break;
 
                     case "youtube":
->>>>>>> 3da2effa5c874d7d5414762c6fb3851c71bee089
                         Program.youtube();
                         break;
 
