@@ -10,7 +10,6 @@ using System.Net;
 using System.Media;
 using HtmlAgilityPack;
 using System.Speech.Synthesis;
-using Google.Cloud.Speech.V1;
 
 namespace BIA_
 {
