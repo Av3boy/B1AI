@@ -14,11 +14,10 @@ namespace BIA_
 {
     class Program
     {
-
         public static string GetUsername = Environment.UserName;
         public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
         public static string Username;
-        public static string[] hellob1 = { "HI B1", "HELLO B1"};
+        public static string[] helloB1 = { "HI B1", "HELLO B1"};
 
         Timer t = new Timer(TimerCallback, null, 0, 2000);
 
@@ -120,11 +119,12 @@ namespace BIA_
                         break;
 
                     default:
-                        if (hellob1.Contains(command, StringComparer.OrdinalIgnoreCase))
+                        if (helloB1.Contains(command, StringComparer.OrdinalIgnoreCase))
                                 Console.WriteLine("Hello " + Username + "! How's it going ?");
                         else
-                        Console.WriteLine("Unknown Command " + command);
+                                Console.WriteLine("Unknown Command " + command);
                         break;
+                    
                 }
                 
             }
