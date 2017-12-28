@@ -9,21 +9,26 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Media;
 using HtmlAgilityPack;
+using System.Speech.Synthesis;
+using Google.Cloud.Speech.V1;
 
 namespace BIA_
 {
     class Program
     {
+        public static SpeechSynthesizer speaker = new SpeechSynthesizer();
         public static string GetUsername = Environment.UserName;
         public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
         public static string Username;
-        public static string[] helloB1 = { "HI B1", "HELLO B1"};
+        public static string[] helloB1 = { "HI B1", "HELLO B1", "HEY B1" };
 
         Timer t = new Timer(TimerCallback, null, 0, 2000);
-
+        
         public static void Main()
         {
-
+            speaker.Rate = 1;
+            speaker.Volume = 100;
+            
             Welcome();
             Commands();
             ListenForKeyWords();
@@ -31,12 +36,16 @@ namespace BIA_
 
         public static void Welcome()
         {
+            Thread.CurrentThread.IsBackground = true;
             if (!File.Exists(configpath))
             {
 
                 Console.WriteLine("Hello! My name is B1, i am programmed to serve as an allpurpose program.");
                 Console.WriteLine("How can i help? Type 'help' to see available commands.");
                 Console.WriteLine("But first, i wan't to know your name: ");
+                speaker.Speak("Hello! My name is B1, i am programmed to serve as an allpurpose program.");
+                speaker.Speak("How can i help? Type 'help' to see available commands.");
+                speaker.Speak("But first, i wan't to know your name: ");
                 Username = Console.ReadLine();
 
                 using (var tw = new StreamWriter(configpath, true))
@@ -52,15 +61,16 @@ namespace BIA_
             if (File.Exists(configpath))
             {
                 string username = File.ReadLines(configpath).First();
-                Console.WriteLine("Hello " + username + "! How i can help today ?");
-                Console.WriteLine("As you already know, type /help to see available commands.");
+                Console.WriteLine("Hello " + username + "! How i can help you today ?");
+                Console.WriteLine("As you already know, type 'help' to see available commands.");
+                speaker.Speak("Hello " + username + "! How i can help you today ?");
                 Commands();
             }
         }
 
         public static void Commands()
         {
-
+            
             String command;
             Boolean quitNow = false;
 
@@ -86,7 +96,7 @@ namespace BIA_
                         break;
 
                     case "test":
-                        Program.asd();
+                        
                         break;
 
                     case "youtube":
@@ -112,6 +122,7 @@ namespace BIA_
 
                     case "time":
                         Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt"));
+                        speaker.Speak(DateTime.Now.ToString("h:mm:ss tt"));
                         break;
 
                     case "cal":
@@ -120,13 +131,18 @@ namespace BIA_
 
                     default:
                         if (helloB1.Contains(command, StringComparer.OrdinalIgnoreCase))
-                                Console.WriteLine("Hello " + Username + "! How's it going ?");
+                        {
+                            Program.hey();
+                            break;
+                        }
+                           
                         else
-                                Console.WriteLine("Unknown Command " + command);
+                            Console.WriteLine("Unknown Command " + command);
+                            speaker.Speak("Unknown Command " + command);
                         break;
-                    
+
                 }
-                
+
             }
 
         }
@@ -154,7 +170,7 @@ namespace BIA_
 
         private static void TimerCallback(Object o)
         {
-           
+
             Console.WriteLine("pillu");
             // Force a garbage collection to occur for this demo.
             GC.Collect();
@@ -177,8 +193,8 @@ namespace BIA_
 
         public static void commands()
         {
-            string[] commands = new string[7] { "/help to show this dialog.", "/changeusername to change username.", "/version to show current version.",
-                "/quit to close application.", "/time to show current time.", "/cal to open calculator.", "/clear to reset this window." };
+            string[] commands = new string[7] { "help to show this dialog.", "changeusername to change username.", "version to show current version.",
+                "quit to close application.", "time to show current time.", "cal to open calculator.", "clear to reset this window." };
             foreach (string s in commands)
             {
                 Console.WriteLine(s);
@@ -250,15 +266,71 @@ namespace BIA_
             Process.Start("https://www.google.fi/search?q=" + searchInput);
 
         }
-        public static void asd()
+        public static void hey()
         {
-            HtmlWeb web = new HtmlWeb();
-            HtmlDocument document = web.Load("https://www.youtube.com/results?search_query=asd");
-            HtmlNode[] nodes = document.DocumentNode.SelectNodes("//a/slot").ToArray();
-            foreach (HtmlNode item in nodes)
+            Random random1 = new Random();
+            string Hello1 = "Hey";
+            string Hello2 = "Hi";
+            string Hello3 = "Hello";
+            string Question1 = "! How are you doing?";
+            string Question2 = "! How have you been?";
+            string Question3 = "! How's everything?";
+            string Question4 = "! How's it going?";
+            string Question5 = "! What's going on?";
+            string Question6 = "! What's new?";
+            string Question7 = "! What's up?";
+            string Question8 = "! Whassup?";
+            string Question9 = "! What are you up to?";
+            string Message1 = "";
+            string Message2 = "";
+            int randomNumber1 = random1.Next(0, 3);
+            switch (randomNumber1)
             {
-                Console.WriteLine(item.InnerHtml);
+                case 0:
+                    Message1 = Hello1;
+                break;
+
+                case 1:
+                    Message1 = Hello2;
+                    break;
+                case 2:
+                    Message1 = Hello3;
+                    break;
             }
+            int randomNumber2 = random1.Next(0, 9);
+            switch (randomNumber2)
+            {
+                case 0:
+                    Message2 = Question1;
+                    break;
+                case 1:
+                    Message2 = Question2;
+                    break;
+                case 2:
+                    Message2 = Question3;
+                    break;
+                case 3:
+                    Message2 = Question4;
+                    break;
+                case 4:
+                    Message2 = Question5;
+                    break;
+                case 5:
+                    Message2 = Question6;
+                    break;
+                case 6:
+                    Message2 = Question7;
+                    break;
+                case 7:
+                    Message2 = Question8;
+                    break;
+                case 8:
+                    Message2 = Question9;
+                    break;
+            }
+
+            Console.WriteLine(Message1 + Username + Message2);
+            speaker.Speak(Message1 + Username + Message2 );
         }
     }
 }
