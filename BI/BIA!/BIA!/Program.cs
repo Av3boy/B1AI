@@ -18,6 +18,7 @@ namespace BIA_
         public static string GetUsername = Environment.UserName;
         public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
         public static string Username;
+        public static string[] hellobi = { "Hi B1", "HI B1", "hi b1", "hI b1",  };
 
         Timer t = new Timer(TimerCallback, null, 0, 2000);
 
@@ -119,8 +120,8 @@ namespace BIA_
                         break;
 
                     default:
-                        if (command == "Hello B1")
-                        Console.WriteLine("Hello " + Username + "! How's it going ?");
+                        if (hellobi.Any(command.Contains))
+                            Console.WriteLine("Hello " + Username + "! How's it going ?");
                         else
                         Console.WriteLine("Unknown Command " + command);
                         break;
@@ -128,10 +129,6 @@ namespace BIA_
                 
             }
 
-        }
-        static void Hellomessage()
-        {
-            
         }
         private static void Pornoo()
         {
