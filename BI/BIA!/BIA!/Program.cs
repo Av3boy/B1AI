@@ -17,6 +17,7 @@ namespace BIA_
 
         public static string GetUsername = Environment.UserName;
         public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
+        public static string Username;
 
         Timer t = new Timer(TimerCallback, null, 0, 2000);
 
@@ -26,7 +27,6 @@ namespace BIA_
             Welcome();
             Commands();
             ListenForKeyWords();
-
         }
 
         public static void Welcome()
@@ -35,13 +35,13 @@ namespace BIA_
             {
 
                 Console.WriteLine("Hello! My name is B1, i am programmed to serve as an allpurpose program.");
-                Console.WriteLine("How can i help? Type /HELP to see available commands.");
+                Console.WriteLine("How can i help? Type 'help' to see available commands.");
                 Console.WriteLine("But first, i wan't to know your name: ");
+                Username = Console.ReadLine();
 
-                string usernameToSave = Console.ReadLine();
                 using (var tw = new StreamWriter(configpath, true))
                 {
-                    tw.WriteLine(usernameToSave);
+                    tw.WriteLine(Username);
                     tw.Close();
                     Console.Clear();
                     Program.Main();
@@ -85,7 +85,7 @@ namespace BIA_
                         Program.Main();
                         break;
 
-                    case "asd":
+                    case "test":
                         Program.asd();
                         break;
 
@@ -119,16 +119,27 @@ namespace BIA_
                         break;
 
                     default:
+                        if (command == "Hello B1")
+                        Console.WriteLine("Hello " + Username + "! How's it going ?");
+                        else
                         Console.WriteLine("Unknown Command " + command);
                         break;
                 }
+                
             }
 
         }
-
+        static void Hellomessage()
+        {
+            
+        }
         private static void Pornoo()
         {
             Console.WriteLine("Select Category:");
+            Console.WriteLine("MILF");
+            Console.WriteLine("Gay");
+            Console.WriteLine("Lesbian");
+            Console.WriteLine("");
 
             string searchInput = Console.ReadLine();
             Process.Start("https://www.youtube.com/results?search_query=" + searchInput);
@@ -136,7 +147,6 @@ namespace BIA_
 
         private static void ListenForKeyWords()
         {
-
             string[] keyWords = new string[1] { "Hey B1" };
             foreach (string s in keyWords)
             {
