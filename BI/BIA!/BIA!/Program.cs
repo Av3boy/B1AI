@@ -10,12 +10,24 @@ using System.Net;
 using System.Media;
 using HtmlAgilityPack;
 using System.Speech.Synthesis;
+<<<<<<< HEAD
+using System.Speech.Recognition;
+=======
+>>>>>>> 0778878542fc7db984331d4004af6b2ba9f5d6ef
 
 namespace BIA_
 {
     class Program
     {
+<<<<<<< HEAD
         public static string logpath = @"C:\Users\" + GetUsername + @"\B1log.txt";
+=======
+<<<<<<< HEAD
+
+        public SpeechRecognitionEngine speechRecognitionEngine = new SpeechRecognitionEngine();
+=======
+>>>>>>> 0778878542fc7db984331d4004af6b2ba9f5d6ef
+>>>>>>> 92cc13f94396aa783315cb6cea2b665beb72bd6e
         public static SpeechSynthesizer speaker = new SpeechSynthesizer();
         public static string GetUsername = Environment.UserName;
         public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
@@ -193,8 +205,13 @@ namespace BIA_
 
         public static void commands()
         {
+<<<<<<< HEAD
+            string[] commands = new string[7] { "'help' to show this dialog.", "'changeusername' to change username.", "'version' to show current version.",
+                "'quit' to close application.", "'time' to show current time.", "'cal' to open calculator.", "'clear' to reset this window." };
+=======
             string[] commands = new string[7] { "help to show this dialog.", "changeusername to change username.", "version to show current version.",
                 "quit to close application.", "time to show current time.", "cal to open calculator.", "clear to reset this window." };
+>>>>>>> 0778878542fc7db984331d4004af6b2ba9f5d6ef
             foreach (string s in commands)
             {
                 Console.WriteLine(s);
@@ -270,9 +287,19 @@ namespace BIA_
         {
             string username = File.ReadLines(configpath).First();
             Random random1 = new Random();
+<<<<<<< HEAD
             string Hello1 = "Hey ";
             string Hello2 = "Hi ";
             string Hello3 = "Hello ";
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0778878542fc7db984331d4004af6b2ba9f5d6ef
+            string Hello1 = "Hey";
+            string Hello2 = "Hi";
+            string Hello3 = "Hello";
+>>>>>>> 92cc13f94396aa783315cb6cea2b665beb72bd6e
             string Question1 = "! How are you doing?";
             string Question2 = "! How have you been?";
             string Question3 = "! How's everything?";
@@ -284,7 +311,62 @@ namespace BIA_
             string Question9 = "! What are you up to?";
             string Message1 = "";
             string Message2 = "";
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+            int randomNumber1 = random1.Next(0, 3);
+
+            switch (randomNumber1)
+            {
+                case 0:
+                    Message1 = Hello1;
+                break;
+
+                case 1:
+                    Message1 = Hello2;
+                    break;
+                case 2:
+                    Message1 = Hello3;
+                    break;
+            }
+
+            int randomNumber2 = random1.Next(0, 9);
+
+            switch (randomNumber2)
+            {
+                case 0:
+                    Message2 = Question1;
+                    break;
+                case 1:
+                    Message2 = Question2;
+                    break;
+                case 2:
+                    Message2 = Question3;
+                    break;
+                case 3:
+                    Message2 = Question4;
+                    break;
+                case 4:
+                    Message2 = Question5;
+                    break;
+                case 5:
+                    Message2 = Question6;
+                    break;
+                case 6:
+                    Message2 = Question7;
+                    break;
+                case 7:
+                    Message2 = Question8;
+                    break;
+                case 8:
+                    Message2 = Question9;
+                    break;
+            }
+
+=======
+>>>>>>> 92cc13f94396aa783315cb6cea2b665beb72bd6e
             int randomNumber1 = random1.Next(0, 3);
             switch (randomNumber1)
             {
@@ -334,6 +416,7 @@ namespace BIA_
                     break;
             }
 
+<<<<<<< HEAD
             Console.WriteLine(Message1 + username + Message2);
             speaker.Speak(Message1 + username + Message2 );
         }
@@ -347,6 +430,11 @@ namespace BIA_
                     Program.Main();
                 }
          
+=======
+>>>>>>> 0778878542fc7db984331d4004af6b2ba9f5d6ef
+            Console.WriteLine(Message1 + Username + Message2);
+            speaker.Speak(Message1 + Username + Message2 );
+>>>>>>> 92cc13f94396aa783315cb6cea2b665beb72bd6e
         }
     }
 }
