@@ -15,6 +15,7 @@ namespace BIA_
 {
     class Program
     {
+        public static string logpath = @"C:\Users\" + GetUsername + @"\B1log.txt";
         public static SpeechSynthesizer speaker = new SpeechSynthesizer();
         public static string GetUsername = Environment.UserName;
         public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
@@ -95,7 +96,7 @@ namespace BIA_
                         break;
 
                     case "test":
-                        
+                        Program.log();
                         break;
 
                     case "youtube":
@@ -267,10 +268,11 @@ namespace BIA_
         }
         public static void hey()
         {
+            string username = File.ReadLines(configpath).First();
             Random random1 = new Random();
-            string Hello1 = "Hey";
-            string Hello2 = "Hi";
-            string Hello3 = "Hello";
+            string Hello1 = "Hey ";
+            string Hello2 = "Hi ";
+            string Hello3 = "Hello ";
             string Question1 = "! How are you doing?";
             string Question2 = "! How have you been?";
             string Question3 = "! How's everything?";
@@ -282,6 +284,7 @@ namespace BIA_
             string Question9 = "! What are you up to?";
             string Message1 = "";
             string Message2 = "";
+
             int randomNumber1 = random1.Next(0, 3);
             switch (randomNumber1)
             {
@@ -317,19 +320,33 @@ namespace BIA_
                 case 5:
                     Message2 = Question6;
                     break;
+
                 case 6:
                     Message2 = Question7;
                     break;
+
                 case 7:
                     Message2 = Question8;
                     break;
+
                 case 8:
                     Message2 = Question9;
                     break;
             }
 
-            Console.WriteLine(Message1 + Username + Message2);
-            speaker.Speak(Message1 + Username + Message2 );
+            Console.WriteLine(Message1 + username + Message2);
+            speaker.Speak(Message1 + username + Message2 );
+        }
+        public static void log()
+        {
+                using (var tw = new StreamWriter(logpath, true))
+                {
+                    tw.WriteLine(DateTime.Now.ToString("h:mm:ss tt"));
+                    tw.Close();
+                    Console.Clear();
+                    Program.Main();
+                }
+         
         }
     }
 }
