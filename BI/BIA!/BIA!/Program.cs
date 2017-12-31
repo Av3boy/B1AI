@@ -11,24 +11,25 @@ using System.Media;
 using HtmlAgilityPack;
 using System.Speech.Synthesis;
 using System.Speech.Recognition;
+using System.Speech;
 
 
 namespace BIA_
 {
     class Program
     {
-        public static SpeechRecognizer sr = new SpeechRecognizer();
         public static SpeechSynthesizer speaker = new SpeechSynthesizer();
         public static string GetUsername = Environment.UserName;
         public static string logpath = @"C:\Users\" + GetUsername + @"\B1log.txt";
         public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
         public static string Username;
-        public static string[] helloB1 = { "HI B1", "HELLO B1", "HEY B1" };
+        public static string[] helloB1 = { "HI B1", "HELLO B1", "HEY B1", "HI", "HEY", "HELLO", "Suhh" };
 
         Timer t = new Timer(TimerCallback, null, 0, 2000);
         
         public static void Main()
         {
+           
             speaker.Rate = 1;
             speaker.Volume = 100;
 
@@ -253,49 +254,26 @@ namespace BIA_
         }
         static void speech()
         {
+            var speech = new SpeechRecognitionEngine();
+            Grammar gr = new Grammar(new GrammarBuilder(new Choices("Hello")));
 
-            // Select a speech recognizer that supports English.
-            RecognizerInfo info = null;
-            foreach (RecognizerInfo ri in SpeechRecognitionEngine.InstalledRecognizers())
+            try
             {
-                if (ri.Culture.TwoLetterISOLanguageName.Equals("en"))
-                {
-                    info = ri;
-                    break;
-                }
+                speech.RequestRecognizerUpdate();
+                speech.LoadGrammar(gr);
+                speech.SpeechRecognized += reconized_voice;
+                speech.SetInputToDefaultAudioDevice();
+                speech.RecognizeAsync(RecognizeMode.Multiple);
             }
-            if (info == null) return;
-
-            // Create the selected recognizer.
-            using (SpeechRecognitionEngine recognizer =
-              new SpeechRecognitionEngine(info))
+            catch (Exception e)
             {
-
-                // Create and load a dictation grammar.
-                recognizer.LoadGrammar(new DictationGrammar());
-
-                // Add a handler for the speech recognized event.
-                recognizer.SpeechRecognized +=
-                  new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
-
-                // Configure input to the speech recognizer.
-                recognizer.SetInputToDefaultAudioDevice();
-
-                // Start asynchronous, continuous speech recognition.
-                recognizer.RecognizeAsync(RecognizeMode.Multiple);
-
-                // Keep the console window open.
-                while (true)
-                {
-                    Console.ReadLine();
-                }
+                Console.WriteLine(e.Message.ToString());
             }
+            Console.ReadLine();
         }
-
-        // Handle the SpeechRecognized event.
-        static void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        public static void reconized_voice(object sender, SpeechRecognizedEventArgs e)
         {
-            Console.WriteLine("Recognized text: " + e.Result.Text);
+            Console.WriteLine(e.Result.Text.ToString());
         }
 
         public static void youtube()
@@ -393,8 +371,6 @@ namespace BIA_
         public static void log()
         {
 
-            if (!File.Exists(logpath))
-            {
                 using (var tw = new StreamWriter(logpath, true))
                 {
                     tw.WriteLine(DateTime.Now.ToString("yyyy-MM-dd h:mm:ss tt"));
@@ -402,18 +378,7 @@ namespace BIA_
                     Console.Clear();
                     Welcome();
                 }
-            }
-
-            else
-            {
-                using (var tw = new StreamWriter(logpath, true))
-                {
-                    tw.WriteLine(DateTime.Now.ToString("yyyy-MM-dd h:mm:ss tt"));
-                    tw.Close();
-                    Console.Clear();
-                    Welcome();
-                }
-            }
+          
         }
     }
 }
