@@ -19,6 +19,9 @@ namespace BIA_
     class Program
     {
         public static SpeechSynthesizer speaker = new SpeechSynthesizer();
+
+        public static string command = "";
+        public static string reconized = "";
         public static string GetUsername = Environment.UserName;
         public static string logpath = @"C:\Users\" + GetUsername + @"\B1log.txt";
         public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
@@ -35,7 +38,6 @@ namespace BIA_
 
             log();
             Commands();
-            ListenForKeyWords();
         }
 
         public static void Welcome()
@@ -75,13 +77,24 @@ namespace BIA_
         public static void Commands()
         {
             
-            String command;
+            
             Boolean quitNow = false;
 
             while (!quitNow)
             {
+                Program.speech();
+
                 command = Console.ReadLine();
-                switch (command)
+
+                if (!String.IsNullOrEmpty(command))
+                {
+                    reconized = command;
+                }
+
+                if (reconized == "hello")
+                    Program.google();
+
+                switch (reconized)
                 {
                     case "google":
                         Program.google();
@@ -146,7 +159,10 @@ namespace BIA_
                         break;
 
                 }
-
+                if (!String.IsNullOrEmpty(reconized))
+                {
+                    reconized = "";
+                }   
             }
 
         }
@@ -161,16 +177,6 @@ namespace BIA_
 
             string searchInput = Console.ReadLine();
             Process.Start("https://www.youtube.com/results?search_query=" + searchInput);
-        }
-
-        private static void ListenForKeyWords()
-        {
-            string[] keyWords = new string[1] { "Hey B1" };
-            foreach (string s in keyWords)
-            {
-                Console.WriteLine(s);
-            }
-
         }
 
         private static void TimerCallback(Object o)
@@ -255,25 +261,20 @@ namespace BIA_
         static void speech()
         {
             var speech = new SpeechRecognitionEngine();
-            Grammar gr = new Grammar(new GrammarBuilder(new Choices("Hello")));
+            Grammar gr = new Grammar(new GrammarBuilder(new Choices("hello", "who are you")));
 
-            try
-            {
+
                 speech.RequestRecognizerUpdate();
                 speech.LoadGrammar(gr);
                 speech.SpeechRecognized += reconized_voice;
                 speech.SetInputToDefaultAudioDevice();
                 speech.RecognizeAsync(RecognizeMode.Multiple);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message.ToString());
-            }
-            Console.ReadLine();
+            
         }
         public static void reconized_voice(object sender, SpeechRecognizedEventArgs e)
         {
-            Console.WriteLine(e.Result.Text.ToString());
+            reconized = e.Result.Text.ToString();
+            Console.WriteLine(reconized);
         }
 
         public static void youtube()
