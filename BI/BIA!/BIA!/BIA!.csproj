@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminIdentity.cs" />
+    <Compile Include="AlarmClock.cs" />
     <Compile Include="ChromosomeAlert.cs" />
     <Compile Include="Commands.cs" />
     <Compile Include="PrintCommands.cs" />

@@ -3,17 +3,20 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Diagnostics;
 using System.Net;
 using System.Media;
 using System.Speech.Synthesis;
 using System.Speech.Recognition;
+using System.Timers;
 
 namespace BIA_
 {
     class Program
     {
+
+        
+
         public static Boolean admin = false;
 
         public static SpeechSynthesizer speaker = new SpeechSynthesizer();
@@ -27,13 +30,14 @@ namespace BIA_
         
         public static void Main()
         {
-
+            
+            
             speaker.Rate = 1;
             speaker.Volume = 100;
 
             Speech.speech();
             Log.log();
-        
+
         }
 
         private static void TimerCallback(Object o)

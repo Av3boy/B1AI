@@ -13,10 +13,9 @@ namespace BIA_
     {
         public static void check()
         {
-            Timer myTimer = new Timer();
-            myTimer.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
-            myTimer.Interval = 5000;
-
+            Timer lockout = new Timer();
+            lockout.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
+            lockout.Interval = 5000;
             Boolean adminpassword = false;
 
             string adminpasswordstring = "";
@@ -28,12 +27,12 @@ namespace BIA_
                 if (Program.reconized == "yes")
                 {
                     Program.speaker.Speak("You have 5 seconds to prove your identity before system lock you out permanently.");
-                    myTimer.Start();
+                    lockout.Start();
                     while (String.IsNullOrEmpty(adminpasswordstring))
                     {
                         if (Program.reconized == "27255374")
                         {
-                            myTimer.Stop();
+                            lockout.Stop();
                             Program.speaker.Speak("Hello root! Admin permissions granted.");
                             Program.admin = true;
                             adminpassword = true;

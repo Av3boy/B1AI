@@ -5,24 +5,32 @@ using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
+using System.Timers;
 
 namespace BIA_
 {
     class Commands
     {
+        
+
         public static void commands()
         {
 
+            Timer alarmclock = new Timer();
+            alarmclock.Interval = 1000;
+            alarmclock.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
+            alarmclock.Start();
             Boolean quitNow = false;
             Boolean heyb1 = false;
-
-            int resetCounter = 0;
             
             while (!quitNow)
             {
 
                 while (heyb1 == false)
                 {
+
+                    
+
                     if (Program.reconized == "hey mate")
                     {
                         Program.reconized = "";
@@ -30,14 +38,6 @@ namespace BIA_
                         SoundPlayer player = new SoundPlayer();
                         player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\pop.wav";
                         player.Play();
-                        resetCounter += 1;
-                    }
-
-                    if(resetCounter == 20)
-                    {
-
-                        Program.reconized = "";
-
                     }
 
                 }
@@ -142,6 +142,14 @@ namespace BIA_
                 heyb1 = false;
             }
 
+        }
+        public static void DisplayTimeEvent(object source, ElapsedEventArgs e)
+        {
+            Console.WriteLine(DateTime.Now.ToString("h:mm:ss"));
+            string CurrentTime = DateTime.Now.ToString("h:mm:ss");
+            string AlarmTime = "3:43:00";
+            if (AlarmTime == CurrentTime)
+                AlarmClock.alarm();
         }
     }
 }
