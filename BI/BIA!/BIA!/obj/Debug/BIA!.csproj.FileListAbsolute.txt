@@ -43,3 +43,17 @@ D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csprojResolveAssemblyReferen
 D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csproj.CoreCompileInputs.cache
 D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.exe
 D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.pdb
+C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\Alert.wav
+C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\pop.wav
+C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.exe.config
+C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.exe
+C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.pdb
+C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\AudioSwitcher.AudioApi.CoreAudio.dll
+C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\AudioSwitcher.AudioApi.dll
+C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.dll
+C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.pdb
+C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.xml
+C:\git\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csprojResolveAssemblyReference.cache
+C:\git\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csproj.CoreCompileInputs.cache
+C:\git\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.exe
+C:\git\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.pdb

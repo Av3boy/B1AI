@@ -147,7 +147,7 @@ namespace BIA_
         {
             Console.WriteLine(DateTime.Now.ToString("h:mm:ss"));
             string CurrentTime = DateTime.Now.ToString("h:mm:ss");
-            string AlarmTime = "3:43:00";
+            string AlarmTime = "3:53:00";
             if (AlarmTime == CurrentTime)
                 AlarmClock.alarm();
         }
