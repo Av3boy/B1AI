@@ -11,24 +11,17 @@ namespace BIA_
     {
         public static void speech()
         {
-
             SpeechRecognitionEngine speech = new SpeechRecognitionEngine();
-            Grammar gr = new Grammar(new GrammarBuilder(new Choices("hey mate", "hello", "google", "What can you do", "i am the admin", "27255374", "no", "yes", "mayday mayday", "clear", "chromosome alert", "Shutdown my workstation", "lan", "led")));
-            //Grammar SpecifyUsername = new Grammar(new GrammarBuilder(new Choices("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "å", "ä", "ö")));
-
-            speech.RequestRecognizerUpdate();
-            speech.LoadGrammar(gr);
-            speech.SpeechRecognized += reconized_voice;
+            speech.LoadGrammar(new Grammar(new GrammarBuilder(new Choices(File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "\\B1commands.txt")))));
+            Console.WriteLine(AppDomain.CurrentDomain.BaseDirectory);
+            speech.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(reconized_voice);
             speech.SetInputToDefaultAudioDevice();
             speech.RecognizeAsync(RecognizeMode.Multiple);
- 
         }
 
         public static void reconized_voice(object sender, SpeechRecognizedEventArgs e)
         {
-
             Program.reconized = e.Result.Text.ToString();
-            
         }
     }
 }

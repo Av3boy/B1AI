@@ -85,6 +85,9 @@
     <Content Include="Alert.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="B1commands.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="B1config.txt" />
     <Content Include="pop.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
