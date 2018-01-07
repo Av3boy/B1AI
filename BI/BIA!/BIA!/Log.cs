@@ -11,14 +11,12 @@ namespace BIA_
     {
         public static void log()
         {
-
             using (var tw = new StreamWriter(Program.logpath, true))
             {
                 tw.WriteLine(DateTime.Now.ToString("yyyy-MM-dd h:mm:ss tt"));
                 tw.Close();
                 Welcome.welcome();
             }
-
         }
     }
 }
