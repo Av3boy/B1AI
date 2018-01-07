@@ -15,6 +15,7 @@ namespace BIA_
     class Program
     {
 
+        public static string AlarmTime = "";
         public static string activeLanguage = "English";
 
         public static Boolean admin = false;
