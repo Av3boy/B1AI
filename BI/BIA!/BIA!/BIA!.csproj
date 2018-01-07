@@ -61,10 +61,13 @@
     <Compile Include="AlarmClock.cs" />
     <Compile Include="ChromosomeAlert.cs" />
     <Compile Include="Commands.cs" />
+    <Compile Include="Language.cs" />
+    <Compile Include="Led.cs" />
     <Compile Include="PrintCommands.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Quit.cs" />
     <Compile Include="Speech.cs" />
+    <Compile Include="Spotify.cs" />
     <Compile Include="Welcome.cs" />
     <Compile Include="Youtube.cs" />
     <Compile Include="Calculator.cs" />

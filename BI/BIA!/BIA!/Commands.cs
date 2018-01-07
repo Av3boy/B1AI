@@ -95,11 +95,10 @@ namespace BIA_
                     case "Shutdown my workstation":
                         Process.Start("shutdown", "/s /t 1");
                         Environment.Exit(0);
-                        break;
-                        
+                        break;                 
 
                     case "version":
-                        Console.WriteLine("V 0.1.1");
+                        Console.WriteLine("V 0.2.2");
                         break;
 
                     case "quit":
@@ -117,6 +116,10 @@ namespace BIA_
 
                     case "cal":
                         Calculator.calculator();
+                        break;
+
+                    case "lan":
+                        Language.LanguageSelector();
                         break;
 
                     default:
@@ -139,10 +142,12 @@ namespace BIA_
                 {
                     Program.reconized = "";
                 }
+
                 heyb1 = false;
             }
 
         }
+
         public static void DisplayTimeEvent(object source, ElapsedEventArgs e)
         {
             Console.WriteLine(DateTime.Now.ToString("h:mm:ss"));
@@ -151,5 +156,6 @@ namespace BIA_
             if (AlarmTime == CurrentTime)
                 AlarmClock.alarm();
         }
+
     }
 }

@@ -16,7 +16,7 @@ namespace BIA_
             Console.WriteLine("Gay");
             Console.WriteLine("Lesbian");
             string searchInput = Console.ReadLine();
-            Process.Start("https://www.youtube.com/results?search_query=" + searchInput);
+            Process.Start("https://www.pornhub.com/video/search?search=" + searchInput);
         }
     }
 }
