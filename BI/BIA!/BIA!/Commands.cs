@@ -19,6 +19,7 @@ namespace BIA_
             Timer alarmclock = new Timer();
             alarmclock.Interval = 1000;
             alarmclock.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
+            alarmclock.Start();
             Boolean quitNow = false;
             Boolean heyb1 = false;
             
@@ -76,10 +77,6 @@ namespace BIA_
 
                     case "test":
                             Console.WriteLine("xxx");
-                        break;
-                    case "wake me up at morning":
-                        alarmclock.Start();
-                        AlarmClock.SetAlarm();
                         break;
 
                     case "youtube":
@@ -155,6 +152,9 @@ namespace BIA_
         {
             Console.WriteLine(DateTime.Now.ToString("h:mm:ss"));
             string CurrentTime = DateTime.Now.ToString("h:mm:ss");
+            string AlarmTime = "3:53:00";
+            if (AlarmTime == CurrentTime)
+                AlarmClock.alarm();
         }
 
     }

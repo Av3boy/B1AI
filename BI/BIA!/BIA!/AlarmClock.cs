@@ -21,11 +21,11 @@ namespace BIA_
         {
 
             Program.speaker.Speak("Set Alarm. First give me an hour.");
-            string alarmHour = Program.reconized;
+            string alarmHour = Console.ReadLine(); //korjaa toi sillä omalla inputilla
             Program.speaker.Speak("Now give me the minutes");
-            string alarmMinute = Program.reconized;
-            Program.speaker.Speak("Ok. i'll wake you up at:" + alarmHour + ":" + alarmMinute);
-            Program.AlarmTime = (alarmHour + ":" + alarmMinute + ":00");
+            string alarmMinute = Console.ReadLine(); //korjaa toi sillä omalla inputilla
+            Program.speaker.Speak("Ok. i'll wake you up at:" + alarmHour + ":" + alarmMinute + ":" + "00.");
+
         }
 
     }
