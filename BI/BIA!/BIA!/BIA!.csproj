@@ -64,16 +64,13 @@
     <Compile Include="Language.cs" />
     <Compile Include="Led.cs" />
     <Compile Include="PrintCommands.cs" />
-    <Compile Include="Log.cs" />
     <Compile Include="Quit.cs" />
     <Compile Include="Speech.cs" />
     <Compile Include="Spotify.cs" />
     <Compile Include="Welcome.cs" />
-    <Compile Include="Youtube.cs" />
     <Compile Include="Calculator.cs" />
     <Compile Include="Hey.cs" />
-    <Compile Include="Google.cs" />
-    <Compile Include="Porn.cs" />
+    <Compile Include="Search.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -83,6 +80,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Alert.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="B1commands.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="B1config.txt" />

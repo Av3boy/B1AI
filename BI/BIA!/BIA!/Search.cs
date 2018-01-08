@@ -7,8 +7,17 @@ using System.Threading.Tasks;
 
 namespace BIA_
 {
-    class Porn
+    class Search
     {
+        public static void google()
+        {
+
+            Console.WriteLine("Enter search word:");
+
+            string searchInput = Console.ReadLine();
+            Process.Start("https://www.google.fi/search?q=" + searchInput);
+
+        }
         public static void Pornoo()
         {
             Console.WriteLine("Select Category:");
@@ -17,6 +26,16 @@ namespace BIA_
             Console.WriteLine("Lesbian");
             string searchInput = Console.ReadLine();
             Process.Start("https://www.pornhub.com/video/search?search=" + searchInput);
+        }
+        public static void youtube()
+        {
+
+            Console.WriteLine("Enter search word:");
+
+            string searchInput = Console.ReadLine();
+            Process.Start("https://www.youtube.com/results?search_query=" + searchInput);
+
+
         }
     }
 }

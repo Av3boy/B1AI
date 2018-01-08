@@ -15,18 +15,137 @@ namespace BIA_
             SoundPlayer player = new SoundPlayer();
             player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\Alert.wav";
             player.Play();
+            System.Threading.Thread.Sleep(3000);
+            player.Stop();
+
         }
 
-        public static void SetAlarm()
+        public static void SetCustomAlarm()
         {
 
-            Program.speaker.Speak("Set Alarm. First give me an hour.");
-            string alarmHour = Program.reconized;
+            Program.speaker.Speak("Set Alarm, First give me an hour.");
+            System.Threading.Thread.Sleep(3000);
+            int alarmHour = Int32.Parse(Program.reconized);
             Program.speaker.Speak("Now give me the minutes");
-            string alarmMinute = Program.reconized;
+            System.Threading.Thread.Sleep(3000);
+            int alarmMinute = Int32.Parse(Program.reconized);
             Program.speaker.Speak("Ok. i'll wake you up at:" + alarmHour + ":" + alarmMinute);
-            Program.AlarmTime = (alarmHour + ":" + alarmMinute + ":00");
+            if (alarmMinute < 10)
+            {
+                Program.AlarmTime = (alarmHour + ":" + "0" + alarmMinute + ":00");
+                Console.WriteLine(Program.AlarmTime);
+            }
+
         }
 
+        public static void SetSchoolAlarm()
+        {
+            Program.speaker.Speak("Do you have an early alarm or not?");
+
+            Boolean SchoolAlarm = false;
+
+            Boolean EarlyAlarm = true;
+
+            while (true)
+            {
+
+                while (SchoolAlarm == false)
+                {
+
+                    if(Program.reconized == "yes" || Program.reconized == "yes i have" || Program.reconized == "yeah")
+                    {
+                        Program.speaker.Speak("Okay, choose your morning template !");
+                        Program.speaker.Speak("First option is that I want to drink coffee and smoke cigarette in the balcony");
+                        Program.speaker.Speak("Second option is that I want only drink coffee");
+                        Program.speaker.Speak("Third option is that I want only smoke cigarette in the balcony");
+                        Program.speaker.Speak("None of these, just fucking wake me up.");
+                        SchoolAlarm = true;
+                        continue;
+                    }
+                    if (Program.reconized == "no" || Program.reconized == "hell no" || Program.reconized == "nope")
+                    {
+                        Program.speaker.Speak("Okay, choose your morning template !");
+                        Program.speaker.Speak("First option is that I want to drink coffee and smoke cigarette in the balcony");
+                        Program.speaker.Speak("Second option is that I want only drink coffee");
+                        Program.speaker.Speak("Third option is that I want only smoke cigarette in the balcony");
+                        Program.speaker.Speak("None of these, just fucking wake me up.");
+                        SchoolAlarm = true;
+                        continue;
+                    }
+                }
+
+                while (String.IsNullOrEmpty(Program.reconized))
+                {
+                    if (!String.IsNullOrEmpty(Program.reconized))
+                        continue;
+                }
+
+                switch (Program.reconized)
+                {
+                    case "I think its first option":
+
+                        if (EarlyAlarm == true)
+                        {
+                            Program.speaker.Speak("Okay, I'll wake you up at 7:15");
+                            Program.AlarmTime = ("7:15:00");
+                        }
+                        else
+                        {
+                            Program.speaker.Speak("Okay, I'll wake you up at 9:30");
+                            Program.AlarmTime = ("9:30:00");
+                        }
+                            
+                        break;
+
+                    case "I think it's second option":
+                        if (EarlyAlarm == true)
+                        {
+                            Program.speaker.Speak("Okay, I'll wake you up at 7:30");
+                            Program.AlarmTime = ("7:30:00");
+                        }
+                        else
+                        {
+                            Program.speaker.Speak("Okay, I'll wake you up at 9:45");
+                            Program.AlarmTime = ("9:45:00");
+                        }
+
+                        break;
+                        
+
+                    case "I think it's third option":
+                        if (EarlyAlarm == true)
+                        {
+                            Program.speaker.Speak("Okay, I'll wake you up at 7:45");
+                            Program.AlarmTime = ("7:45:00");
+                        }
+                        else
+                        {
+                            Program.speaker.Speak("Okay, I'll wake you up at 9:50");
+                            Program.AlarmTime = ("9:50:00");
+                        }
+
+                        break;
+
+                    case "I think it's fourth option":
+                        if (EarlyAlarm == true)
+                        {
+                            Program.speaker.Speak("Okay, I'll wake you up at 8:00");
+                            Program.AlarmTime = ("8:00:00");
+                        }
+                        else
+                        {
+                            Program.speaker.Speak("Okay, I'll wake you up at 10:00");
+                            Program.AlarmTime = ("10:00:00");
+                        }
+
+                        break;
+
+                }
+                if (!String.IsNullOrEmpty(Program.reconized))
+                {
+                    Program.reconized = "";
+                }
+            }
+        }
     }
 }

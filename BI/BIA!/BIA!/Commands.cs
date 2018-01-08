@@ -24,11 +24,10 @@ namespace BIA_
             
             while (!quitNow)
             {
+                Program.reconized = "";
 
                 while (heyb1 == false)
                 {
-
-                    
 
                     if (Program.reconized == "hey mate")
                     {
@@ -38,7 +37,6 @@ namespace BIA_
                         player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\pop.wav";
                         player.Play();
                     }
-
                 }
 
                 while (String.IsNullOrEmpty(Program.reconized))
@@ -50,7 +48,7 @@ namespace BIA_
                 switch (Program.reconized)
                 {
                     case "google":
-                        Google.google();
+                        Search.google();
                         break;
 
                     case "mayday mayday":
@@ -70,6 +68,11 @@ namespace BIA_
                         Program.Main();
                         break;
 
+                    case "set school day alarm":
+                        alarmclock.Start();
+                        AlarmClock.SetSchoolAlarm();
+                        break;
+
                     case "shut the fuck up":
                         Program.speaker.Speak("No, you can go fuck yourself");
                         break;
@@ -77,13 +80,9 @@ namespace BIA_
                     case "test":
                             Console.WriteLine("xxx");
                         break;
-                    case "wake me up at morning":
-                        alarmclock.Start();
-                        AlarmClock.SetAlarm();
-                        break;
 
                     case "youtube":
-                        Youtube.youtube();
+                        Search.youtube();
                         break;
 
                     case "What can you do":
@@ -95,13 +94,18 @@ namespace BIA_
                         AdminIdentity.check();
                         break;
 
-                    case "Shutdown my workstation":
-                        Process.Start("shutdown", "/s /t 1");
-                        Environment.Exit(0);
+                    case "shutdown my workstation":
+                        if (Program.admin == true)
+                        {
+                            Process.Start("shutdown", "/s /t 1");
+                            Environment.Exit(0);
+                        }
+                        if (Program.admin == false)
+                            Program.speaker.Speak("I am sorry, but you do not have admin permissions. Operation aborted.");
                         break;                 
 
                     case "version":
-                        Console.WriteLine("V 0.2.2");
+                        Console.WriteLine("V 0.3.2");
                         break;
 
                     case "quit":
@@ -109,7 +113,7 @@ namespace BIA_
                         break;
 
                     case "pornoo":
-                        Porn.Pornoo();
+                        Search.Pornoo();
                         break;
 
                     case "time":
@@ -117,12 +121,17 @@ namespace BIA_
                         Program.speaker.Speak(DateTime.Now.ToString("h:mm:ss tt"));
                         break;
 
-                    case "cal":
+                    case "calculator":
                         Calculator.calculator();
                         break;
 
-                    case "lan":
+                    case "change language":
                         Language.LanguageSelector();
+                        break;
+
+                    case "wake me up at morning":
+                        alarmclock.Start();
+                        AlarmClock.SetCustomAlarm();
                         break;
 
                     default:
@@ -134,8 +143,8 @@ namespace BIA_
 
                         else
                         {
-                            Console.WriteLine("Unknown Command " + Program.reconized);
-                            Program.speaker.Speak("Unknown Command " + Program.reconized);
+                            Console.WriteLine("I am sorry, but im not be able to execute that command");
+                            Program.speaker.Speak("I am sorry, but im not be able to execute that command");
                             break;
                         }
                             
@@ -148,14 +157,13 @@ namespace BIA_
 
                 heyb1 = false;
             }
-
         }
 
         public static void DisplayTimeEvent(object source, ElapsedEventArgs e)
         {
-            Console.WriteLine(DateTime.Now.ToString("h:mm:ss"));
             string CurrentTime = DateTime.Now.ToString("h:mm:ss");
+            if (Program.AlarmTime == CurrentTime)
+                AlarmClock.alarm();
         }
-
     }
 }

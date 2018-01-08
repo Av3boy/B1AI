@@ -9,16 +9,15 @@ using System.Media;
 using System.Speech.Synthesis;
 using System.Speech.Recognition;
 using System.Timers;
+using System.Security.Cryptography;
 
 namespace BIA_
 {
     class Program
-
-<<<<<<< HEAD
-        public static string activeLanguage = "English";
-=======
     {
->>>>>>> 657e56cf370b134da888bd309d0b4534dd37a9eb
+
+        public static string AlarmTime = "";
+        public static string activeLanguage = "English";
 
         public static Boolean admin = false;
 
@@ -30,26 +29,14 @@ namespace BIA_
         public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
         public static string Username;
         public static string[] helloB1 = { "HI B1", "HELLO B1", "HEY B1" };
-        public static string AlarmTime = "";
-        public static string B1commands = AppDomain.CurrentDomain.BaseDirectory + "\\B1commands.xml";
+        
         public static void Main()
         {
-            
-            
+
             speaker.Rate = 1;
             speaker.Volume = 100;
-
             Speech.speech();
-            Log.log();
-
-        }
-
-        private static void TimerCallback(Object o)
-        {
-
-            Console.WriteLine("pillu");
-            // Force a garbage collection to occur for this demo.
-            GC.Collect();
+            Welcome.welcome();
         }
     }
 }
