@@ -6,6 +6,7 @@ what can you do
 i am the admin
 set school day alarm
 yes
+time
 hell no
 yeah
 yes i want

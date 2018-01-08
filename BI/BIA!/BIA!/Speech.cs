@@ -21,6 +21,7 @@ namespace BIA_
         public static void reconized_voice(object sender, SpeechRecognizedEventArgs e)
         {
             Program.reconized = e.Result.Text.ToString();
+            Console.WriteLine(Program.reconized);
         }
     }
 }

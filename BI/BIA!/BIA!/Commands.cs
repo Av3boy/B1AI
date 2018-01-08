@@ -24,7 +24,6 @@ namespace BIA_
             
             while (!quitNow)
             {
-                Program.reconized = "";
 
                 while (heyb1 == false)
                 {
@@ -47,12 +46,12 @@ namespace BIA_
 
                 switch (Program.reconized)
                 {
-                    case "Google":
+                    case "Search from google":
                         Search.google();
                         break;
 
-                    case "Mayday mayday":
                     case "Chromosome alert":
+                    case "I have some relationship people over here":
                         ChromosomeAlert.player();
                         break;
 
@@ -81,20 +80,20 @@ namespace BIA_
                             Console.WriteLine("xxx");
                         break;
 
-                    case "Youtube":
+                    case "youtube":
                         Search.youtube();
                         break;
 
-                    case "What can you do":
+                    case "what can you do":
                         Console.WriteLine();
                         PrintCommands.commands();
                         break;
 
-                    case "Im the admin":
+                    case "im the admin":
                         AdminIdentity.check();
                         break;
 
-                    case "Shutdown my workstation":
+                    case "shutdown my workstation":
                         if (Program.admin == true)
                         {
                             Process.Start("shutdown", "/s /t 1");
@@ -104,11 +103,11 @@ namespace BIA_
                             Program.speaker.Speak("I am sorry, but you do not have admin permissions. Operation aborted.");
                         break;                 
 
-                    case "Version":
+                    case "what is the version":
                         Console.WriteLine("V 0.3.2");
                         break;
 
-                    case "Quit":
+                    case "exit the application":
                         Quit.quit();
                         break;
 
@@ -116,20 +115,20 @@ namespace BIA_
                         Search.Pornoo();
                         break;
 
-                    case "Time":
+                    case "what time is it":
                         Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt"));
                         Program.speaker.Speak(DateTime.Now.ToString("h:mm:ss tt"));
                         break;
 
-                    case "Calculator":
+                    case "open calculator":
                         Calculator.calculator();
                         break;
 
-                    case "Change language":
+                    case "change language":
                         Language.LanguageSelector();
                         break;
 
-                    case "Wake me up at morning":
+                    case "wake me up at morning":
                         alarmclock.Start();
                         AlarmClock.SetCustomAlarm();
                         break;

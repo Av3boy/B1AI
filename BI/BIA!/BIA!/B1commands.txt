@@ -1,32 +1,39 @@
-change language
-calculator
-hey mate
-hello
-what can you do
-i am the admin
-set school day alarm
-yes
-hell no
-yeah
-yes i want
-yes i have
-nope
+//switch case commands
+Change language
+Calculator
+Hey mate
+Hello
+What can you do
+I am the admin
+Set school day alarm
+What time is it
+Exit the application
+What time is it
+Search from google
+Open calculator
+What is the version
+I have some relationship people over here
+Clear console
+Chromosome alert
+Shutdown my workstation
+Wake me up at morning
+//Answers
+Hell no
+Yeah
+Yes i want
+Yes i have
+Nope
 27255374
 123
-no
-yes
-mayday mayday
-clear
-chromosome alert
-shutdown my workstation
-stop speaking
-sure
-yes i can
-wake me up at morning
+No
+Yes
+Sure
+Yes i can
 I think its first option
 I think its second option
 I think its third option
 I think its fourth option
+//Lot of numbers
 00
 1
 2
