@@ -29,6 +29,7 @@ namespace BIA_
         public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
         public static string Username;
         public static string[] helloB1 = { "HI B1", "HELLO B1", "HEY B1" };
+        
         public static void Main()
         {
 
