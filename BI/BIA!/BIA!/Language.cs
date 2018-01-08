@@ -19,7 +19,7 @@ namespace BIA_
 
             }
 
-            if(Program.reconized == "change language")
+            if(Program.reconized == "change the language")
             {
 
                 string input = Program.reconized = "";

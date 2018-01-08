@@ -47,41 +47,41 @@ namespace BIA_
 
                 switch (Program.reconized)
                 {
-                    case "google":
+                    case "Google":
                         Search.google();
                         break;
 
-                    case "mayday mayday":
-                    case "chromosome alert":
+                    case "Mayday mayday":
+                    case "Chromosome alert":
                         ChromosomeAlert.player();
                         break;
 
-                    case "change username":
+                    case "Change username":
                         string path = @"C:\Users\" + Program.GetUsername + @"\B1config.txt";
                         File.Delete(path);
                         Console.Clear();
                         Welcome.welcome();
                         break;
 
-                    case "clear":
+                    case "Clear":
                         Console.Clear();
                         Program.Main();
                         break;
 
-                    case "set school day alarm":
+                    case "Set school day alarm":
                         alarmclock.Start();
                         AlarmClock.SetSchoolAlarm();
                         break;
 
-                    case "shut the fuck up":
+                    case "Shut the fuck up":
                         Program.speaker.Speak("No, you can go fuck yourself");
                         break;
 
-                    case "test":
+                    case "Test":
                             Console.WriteLine("xxx");
                         break;
 
-                    case "youtube":
+                    case "Youtube":
                         Search.youtube();
                         break;
 
@@ -90,11 +90,11 @@ namespace BIA_
                         PrintCommands.commands();
                         break;
 
-                    case "i am the admin":
+                    case "Im the admin":
                         AdminIdentity.check();
                         break;
 
-                    case "shutdown my workstation":
+                    case "Shutdown my workstation":
                         if (Program.admin == true)
                         {
                             Process.Start("shutdown", "/s /t 1");
@@ -104,32 +104,32 @@ namespace BIA_
                             Program.speaker.Speak("I am sorry, but you do not have admin permissions. Operation aborted.");
                         break;                 
 
-                    case "version":
+                    case "Version":
                         Console.WriteLine("V 0.3.2");
                         break;
 
-                    case "quit":
+                    case "Quit":
                         Quit.quit();
                         break;
 
-                    case "pornoo":
+                    case "Pornoo":
                         Search.Pornoo();
                         break;
 
-                    case "time":
+                    case "Time":
                         Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt"));
                         Program.speaker.Speak(DateTime.Now.ToString("h:mm:ss tt"));
                         break;
 
-                    case "calculator":
+                    case "Calculator":
                         Calculator.calculator();
                         break;
 
-                    case "change language":
+                    case "Change language":
                         Language.LanguageSelector();
                         break;
 
-                    case "wake me up at morning":
+                    case "Wake me up at morning":
                         alarmclock.Start();
                         AlarmClock.SetCustomAlarm();
                         break;
@@ -143,8 +143,8 @@ namespace BIA_
 
                         else
                         {
-                            Console.WriteLine("I am sorry, but im not be able to execute that command");
-                            Program.speaker.Speak("I am sorry, but im not be able to execute that command");
+                            Console.WriteLine("I'm sorry, but im not able to execute that command");
+                            Program.speaker.Speak("I'm sorry, but im not able to execute that command");
                             break;
                         }
                             

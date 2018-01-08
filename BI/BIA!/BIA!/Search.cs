@@ -12,9 +12,10 @@ namespace BIA_
         public static void google()
         {
 
+            Program.speaker.Speak("Enter search word: ");
             Console.WriteLine("Enter search word:");
 
-            string searchInput = Console.ReadLine();
+            string searchInput = Program.reconized = "";
             Process.Start("https://www.google.fi/search?q=" + searchInput);
 
         }

@@ -17,8 +17,11 @@ namespace BIA_
 
             string operation;
 
+            Program.speaker.Speak("give me the first number to calculate");
             first = Convert.ToInt32(Console.ReadLine());
+            Program.speaker.Speak("now give me the operation");
             operation = Console.ReadLine();
+            Program.speaker.Speak("now give me the second number");
             second = Convert.ToInt32(Console.ReadLine());
 
             switch (operation)

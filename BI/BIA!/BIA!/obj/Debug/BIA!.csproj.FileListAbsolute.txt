@@ -58,3 +58,4 @@ C:\git\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csproj.CoreCompileInputs.cache
 C:\git\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.exe
 C:\git\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.pdb
 C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\B1commands.txt
+C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\B1commands.txt

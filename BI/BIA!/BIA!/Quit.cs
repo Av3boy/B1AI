@@ -10,12 +10,13 @@ namespace BIA_
     {
         public static void quit()
         {
-            Console.WriteLine("Are you sure you want to close the program. Press Y to close, Press N to cancel.");
+
+            Console.WriteLine("Are you sure you want to close the program. Y to confirm close, Press N to cancel.");
 
             if (Console.ReadKey(true).Key == ConsoleKey.Y)
                 Environment.Exit(0);
 
-            else if (Console.ReadKey(true).Key == ConsoleKey.N)
+            else if (Console.ReadKey(true).Key == ConsoleKey.N /*|| Program.speaker.Speak("ses")*/)
             {
 
                 Program.Main();
