@@ -33,10 +33,8 @@ namespace BIA_
 
             speaker.Rate = 1;
             speaker.Volume = 100;
-
             Speech.speech();
-            Log.log();
-
+            Welcome.welcome();
         }
     }
 }

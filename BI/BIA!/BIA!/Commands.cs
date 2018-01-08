@@ -47,7 +47,7 @@ namespace BIA_
                 switch (Program.reconized)
                 {
                     case "google":
-                        Google.google();
+                        Search.google();
                         break;
 
                     case "mayday mayday":
@@ -76,7 +76,7 @@ namespace BIA_
                         break;
 
                     case "youtube":
-                        Youtube.youtube();
+                        Search.youtube();
                         break;
 
                     case "What can you do":
@@ -107,7 +107,7 @@ namespace BIA_
                         break;
 
                     case "pornoo":
-                        Porn.Pornoo();
+                        Search.Pornoo();
                         break;
 
                     case "time":
@@ -155,7 +155,6 @@ namespace BIA_
 
         public static void DisplayTimeEvent(object source, ElapsedEventArgs e)
         {
-            Console.WriteLine(DateTime.Now.ToString("h:mm:ss"));
             string CurrentTime = DateTime.Now.ToString("h:mm:ss");
             if (Program.AlarmTime == CurrentTime)
                 AlarmClock.alarm();

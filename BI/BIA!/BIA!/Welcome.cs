@@ -12,7 +12,12 @@ namespace BIA_
     {
         public static void welcome()
         {
-            Thread.CurrentThread.IsBackground = true;
+            using (var tw = new StreamWriter(Program.logpath, true))
+            {
+                tw.WriteLine(DateTime.Now.ToString("yyyy-MM-dd h:mm:ss tt"));
+                tw.Close();
+            }
+
             if (!File.Exists(Program.configpath))
             {
 

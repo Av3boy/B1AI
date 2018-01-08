@@ -15,7 +15,9 @@ namespace BIA_
             SoundPlayer player = new SoundPlayer();
             player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\Alert.wav";
             player.Play();
-            
+            System.Threading.Thread.Sleep(3000);
+            player.Stop();
+
         }
 
         public static void SetAlarm()
@@ -29,8 +31,10 @@ namespace BIA_
             int alarmMinute = Int32.Parse(Program.reconized);
             Program.speaker.Speak("Ok. i'll wake you up at:" + alarmHour + ":" + alarmMinute);
             if (alarmMinute < 10)
-            Program.AlarmTime = (alarmHour + ":" + "0" + alarmMinute + ":00");
-            Console.WriteLine(Program.AlarmTime);
+            {
+                Program.AlarmTime = (alarmHour + ":" + "0" + alarmMinute + ":00");
+                Console.WriteLine(Program.AlarmTime);
+            }
 
         }
     }
