@@ -24,6 +24,7 @@ namespace BIA_
             
             while (!quitNow)
             {
+                Program.reconized = "";
 
                 while (heyb1 == false)
                 {
@@ -65,6 +66,11 @@ namespace BIA_
                     case "clear":
                         Console.Clear();
                         Program.Main();
+                        break;
+
+                    case "set school day alarm":
+                        alarmclock.Start();
+                        AlarmClock.SetSchoolAlarm();
                         break;
 
                     case "shut the fuck up":
@@ -125,7 +131,7 @@ namespace BIA_
 
                     case "wake me up at morning":
                         alarmclock.Start();
-                        AlarmClock.SetAlarm();
+                        AlarmClock.SetCustomAlarm();
                         break;
 
                     default:

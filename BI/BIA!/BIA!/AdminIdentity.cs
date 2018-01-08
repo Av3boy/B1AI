@@ -24,13 +24,13 @@ namespace BIA_
 
             while (adminpassword == false)
             {
-                if (Program.reconized == "yes")
+                if (Program.reconized == "yes" || Program.reconized == "yes i can" || Program.reconized == "sure")
                 {
                     Program.speaker.Speak("You have 5 seconds to prove your identity before system lock you out permanently.");
                     lockout.Start();
                     while (String.IsNullOrEmpty(adminpasswordstring))
                     {
-                        if (Program.reconized == "27255374")
+                        if (Program.reconized == "123")
                         {
                             lockout.Stop();
                             Program.speaker.Speak("Hello root! Admin permissions granted.");

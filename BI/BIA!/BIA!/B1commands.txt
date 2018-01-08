@@ -4,7 +4,15 @@ hey mate
 hello
 what can you do
 i am the admin
+set school day alarm
+yes
+hell no
+yeah
+yes i want
+yes i have
+nope
 27255374
+123
 no
 yes
 mayday mayday
@@ -12,7 +20,13 @@ clear
 chromosome alert
 shutdown my workstation
 stop speaking
+sure
+yes i can
 wake me up at morning
+I think its first option
+I think its second option
+I think its third option
+I think its fourth option
 00
 1
 2

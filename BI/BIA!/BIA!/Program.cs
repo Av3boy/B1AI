@@ -9,6 +9,7 @@ using System.Media;
 using System.Speech.Synthesis;
 using System.Speech.Recognition;
 using System.Timers;
+using System.Security.Cryptography;
 
 namespace BIA_
 {

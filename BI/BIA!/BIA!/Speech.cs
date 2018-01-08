@@ -13,7 +13,6 @@ namespace BIA_
         {
             SpeechRecognitionEngine speech = new SpeechRecognitionEngine();
             speech.LoadGrammar(new Grammar(new GrammarBuilder(new Choices(File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "\\B1commands.txt")))));
-            Console.WriteLine(AppDomain.CurrentDomain.BaseDirectory);
             speech.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(reconized_voice);
             speech.SetInputToDefaultAudioDevice();
             speech.RecognizeAsync(RecognizeMode.Multiple);
