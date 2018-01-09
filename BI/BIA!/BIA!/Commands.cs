@@ -24,12 +24,11 @@ namespace BIA_
             
             while (!quitNow)
             {
-                Program.reconized = "";
 
                 while (heyb1 == false)
                 {
 
-                    if (Program.reconized == "hey mate")
+                    if (Program.reconized == "Hey mate")
                     {
                         Program.reconized = "";
                         heyb1 = true;
@@ -47,12 +46,12 @@ namespace BIA_
 
                 switch (Program.reconized)
                 {
-                    case "Google":
+                    case "Search from google":
                         Search.google();
                         break;
 
-                    case "Mayday mayday":
                     case "Chromosome alert":
+                    case "I have some relationship people over here":
                         ChromosomeAlert.player();
                         break;
 
@@ -63,7 +62,7 @@ namespace BIA_
                         Welcome.welcome();
                         break;
 
-                    case "Clear":
+                    case "Clear console":
                         Console.Clear();
                         Program.Main();
                         break;
@@ -81,7 +80,7 @@ namespace BIA_
                             Console.WriteLine("xxx");
                         break;
 
-                    case "Youtube":
+                    case "Search from youtube":
                         Search.youtube();
                         break;
 
@@ -90,7 +89,7 @@ namespace BIA_
                         PrintCommands.commands();
                         break;
 
-                    case "Im the admin":
+                    case "I am the admin":
                         AdminIdentity.check();
                         break;
 
@@ -104,11 +103,12 @@ namespace BIA_
                             Program.speaker.Speak("I am sorry, but you do not have admin permissions. Operation aborted.");
                         break;                 
 
-                    case "Version":
+                    case "What is the current version":
                         Console.WriteLine("V 0.3.2");
+                        Program.speaker.Speak("Version 0.3.2");
                         break;
 
-                    case "Quit":
+                    case "Exit the application":
                         Quit.quit();
                         break;
 
@@ -116,12 +116,12 @@ namespace BIA_
                         Search.Pornoo();
                         break;
 
-                    case "Time":
+                    case "What time is it":
                         Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt"));
                         Program.speaker.Speak(DateTime.Now.ToString("h:mm:ss tt"));
                         break;
 
-                    case "Calculator":
+                    case "Open calculator":
                         Calculator.calculator();
                         break;
 
@@ -143,8 +143,8 @@ namespace BIA_
 
                         else
                         {
-                            Console.WriteLine("I'm sorry, but im not able to execute that command");
-                            Program.speaker.Speak("I'm sorry, but im not able to execute that command");
+                            Console.WriteLine("I'm sorry, but i'm not able to execute that command");
+                            Program.speaker.Speak("I'm sorry, but i'm not able to execute that command");
                             break;
                         }
                             
