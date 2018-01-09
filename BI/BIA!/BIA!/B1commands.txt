@@ -1,23 +1,21 @@
-//switch case commands
+		//switch case commands
 Change language
-Calculator
 Hey mate
-Hello
 What can you do
 I am the admin
 Set school day alarm
 What time is it
 Exit the application
-What time is it
+Shut the fuck up
 Search from google
+Search from youtube
 Open calculator
-What is the version
-I have some relationship people over here
+What is the current version
 Clear console
 Chromosome alert
 Shutdown my workstation
 Wake me up at morning
-//Answers
+		//Answers
 Hell no
 Yeah
 Yes i want
@@ -33,7 +31,7 @@ I think its first option
 I think its second option
 I think its third option
 I think its fourth option
-//Lot of numbers
+		//Lot of numbers
 00
 1
 2
