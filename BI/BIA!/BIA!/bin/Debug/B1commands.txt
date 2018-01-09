@@ -17,6 +17,7 @@ Shutdown my workstation
 Wake me up at morning
 		//Answers
 Hell no
+Alex is gay
 Yeah
 Yes i want
 Yes i have
@@ -92,3 +93,4 @@ I think its fourth option
 57
 58
 59
+123

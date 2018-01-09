@@ -89,7 +89,7 @@ namespace BIA_
                         PrintCommands.commands();
                         break;
 
-                    case "Im the admin":
+                    case "I am the admin":
                         AdminIdentity.check();
                         break;
 
