@@ -8,6 +8,7 @@ using System.Net;
 using System.Media;
 using System.Speech.Synthesis;
 using System.Speech.Recognition;
+using System.Speech.Recognition.SrgsGrammar;
 using System.Timers;
 using System.Security.Cryptography;
 
@@ -24,6 +25,7 @@ namespace BIA_
         public static SpeechSynthesizer speaker = new SpeechSynthesizer();
 
         public static string reconized = string.Empty;
+        public static string newRecognized = 
         public static string GetUsername = Environment.UserName;
         public static string logpath = @"C:\Users\" + GetUsername + @"\B1log.txt";
         public static string configpath = @"C:\Users\" + GetUsername + @"\B1config.txt";
