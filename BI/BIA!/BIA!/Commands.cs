@@ -118,6 +118,16 @@ namespace BIA_
                         Search.Pornoo();
                         break;
 
+                    case "Revoke admin permissions":
+                        if (Program.admin == true)
+                        {
+                            Program.speaker.Speak("Admin permissions revoked");
+                            Program.admin = false;
+                        }
+                        if (Program.admin == false)
+                            Program.speaker.Speak("Command cannot be executed because you are not admin, operation aborted.");
+                        break;
+
                     case "What time is it":
                         Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt"));
                         Program.speaker.Speak(DateTime.Now.ToString("h:mm:ss tt"));
