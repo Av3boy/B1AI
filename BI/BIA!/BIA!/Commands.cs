@@ -134,6 +134,10 @@ namespace BIA_
                         AlarmClock.SetCustomAlarm();
                         break;
 
+                    case "Led Control":
+                        Led.LedControl();
+                        break;
+
                     default:
                         if (Program.helloB1.Contains(Program.reconized, StringComparer.OrdinalIgnoreCase))
                         {
