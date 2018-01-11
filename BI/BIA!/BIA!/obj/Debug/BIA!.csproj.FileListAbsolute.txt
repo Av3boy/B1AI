@@ -1,61 +1,15 @@
-C:\ohjelmointi\BI\BIA!\BIA!\bin\Debug\BIA!.exe.config
-C:\ohjelmointi\BI\BIA!\BIA!\bin\Debug\BIA!.exe
-C:\ohjelmointi\BI\BIA!\BIA!\bin\Debug\BIA!.pdb
-C:\ohjelmointi\BI\BIA!\BIA!\obj\Debug\BIA!.csprojResolveAssemblyReference.cache
-C:\ohjelmointi\BI\BIA!\BIA!\obj\Debug\BIA!.csproj.CoreCompileInputs.cache
-C:\ohjelmointi\BI\BIA!\BIA!\obj\Debug\BIA!.exe
-C:\ohjelmointi\BI\BIA!\BIA!\obj\Debug\BIA!.pdb
-C:\Git\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.exe.config
-C:\Git\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.exe
-C:\Git\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.pdb
-C:\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csprojResolveAssemblyReference.cache
-C:\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csproj.CoreCompileInputs.cache
-C:\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.exe
-C:\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.pdb
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\Alert.wav
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\B1commands.txt
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\pop.wav
 C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.exe.config
 C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.exe
 C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.pdb
-C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csprojResolveAssemblyReference.cache
-C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csproj.CoreCompileInputs.cache
-C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.exe
-C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.pdb
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\AudioSwitcher.AudioApi.CoreAudio.dll
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\AudioSwitcher.AudioApi.dll
 C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.dll
 C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.xml
-C:\Git\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.dll
-C:\Git\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.pdb
-C:\Git\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.xml
-C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\AudioSwitcher.AudioApi.CoreAudio.dll
-C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\AudioSwitcher.AudioApi.dll
-C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\Alert.wav
-C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\pop.wav
-D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\bin\Debug\Alert.wav
-D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\bin\Debug\pop.wav
-D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.exe.config
-D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.exe
-D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.pdb
-D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\bin\Debug\AudioSwitcher.AudioApi.CoreAudio.dll
-D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\bin\Debug\AudioSwitcher.AudioApi.dll
-D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.dll
-D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.pdb
-D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.xml
-D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csprojResolveAssemblyReference.cache
-D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csproj.CoreCompileInputs.cache
-D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.exe
-D:\Uusi kansio (2)\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.pdb
-C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\Alert.wav
-C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\pop.wav
-C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.exe.config
-C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.exe
-C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\BIA!.pdb
-C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\AudioSwitcher.AudioApi.CoreAudio.dll
-C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\AudioSwitcher.AudioApi.dll
-C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.dll
-C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.pdb
-C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\HtmlAgilityPack.xml
-C:\git\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csprojResolveAssemblyReference.cache
-C:\git\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csproj.CoreCompileInputs.cache
-C:\git\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.exe
-C:\git\Git\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.pdb
-C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\bin\Debug\B1commands.txt
-C:\git\Git\B1AI\BI\BIA!\BIA!\bin\Debug\B1commands.txt
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csproj.CoreCompileInputs.cache
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.exe
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.pdb
+C:\Users\Root\Documents\GitHub\B1AI\BI\BIA!\BIA!\obj\Debug\BIA!.csprojResolveAssemblyReference.cache

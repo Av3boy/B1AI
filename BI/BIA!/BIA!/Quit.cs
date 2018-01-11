@@ -11,16 +11,21 @@ namespace BIA_
         public static void quit()
         {
 
-            Console.WriteLine("Are you sure you want to close the program. Yes to confirm close, Press No to cancel.");
+            Program.speaker.Speak("Are you sure you want to close the program.");
 
-            if (Console.ReadKey(true).Key == ConsoleKey.Y)
-                Environment.Exit(0);
+            Program.reconized = "";
 
-            else if (Console.ReadKey(true).Key == ConsoleKey.N || Program.reconized == "No")
+            while (Program.reconized == "")
             {
+                if (Program.reconized == "Yes")
+                {
+                    Environment.Exit(0);
+                }
 
-                Program.Main();
-
+                else if(Program.reconized == "No")
+                {
+                    Program.Main();
+                }
             }
         }
     }

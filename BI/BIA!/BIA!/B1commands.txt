@@ -1,4 +1,9 @@
 		//switch case commands
+Next song
+Previous song
+Stop music
+Resume music
+Bye bye
 Change language
 Hey mate
 What can you do

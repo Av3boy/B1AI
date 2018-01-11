@@ -108,7 +108,9 @@ namespace BIA_
                         Program.speaker.Speak("Version 0.3.2");
                         break;
 
+                    case "Bye bye":
                     case "Exit the application":
+                        Program.reconized = "";
                         Quit.quit();
                         break;
 
@@ -134,8 +136,20 @@ namespace BIA_
                         AlarmClock.SetCustomAlarm();
                         break;
 
-                    case "Led Control":
-                        Led.LedControl();
+                    case "Next song":
+                        Spotify.NextSong();
+                        break;
+
+                    case "Previous song":
+                        Spotify.PreviousSong();
+                        break;
+
+                    case "Stop music":
+                        Spotify.PauseSong();
+                        break;
+
+                    case "Resume music":
+                        Spotify.ResumePlay();
                         break;
 
                     default:
