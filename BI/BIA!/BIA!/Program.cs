@@ -34,7 +34,7 @@ namespace BIA_
         {
             speaker.Rate = 1;
             speaker.Volume = 100;
-            Speech.speech();
+            SpeechRecognition.speech();
             Welcome.welcome();
         }
     }

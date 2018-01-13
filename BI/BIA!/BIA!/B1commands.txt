@@ -7,6 +7,7 @@ Bye bye
 Revoke admin permissions
 Change language
 Hey mate
+Show my current game stats
 What can you do
 I am the admin
 Set school day alarm

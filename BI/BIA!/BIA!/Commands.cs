@@ -11,8 +11,6 @@ namespace BIA_
 {
     class Commands
     {
-        
-
         public static void commands()
         {
 
@@ -21,7 +19,7 @@ namespace BIA_
             alarmclock.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
             Boolean quitNow = false;
             Boolean heyb1 = false;
-            
+
             while (!quitNow)
             {
 
@@ -40,7 +38,7 @@ namespace BIA_
 
                 while (String.IsNullOrEmpty(Program.reconized))
                 {
-                    if(!String.IsNullOrEmpty(Program.reconized))
+                    if (!String.IsNullOrEmpty(Program.reconized))
                         continue;
                 }
 
@@ -77,7 +75,7 @@ namespace BIA_
                         break;
 
                     case "Test":
-                            Console.WriteLine("xxx");
+                        Console.WriteLine("xxx");
                         break;
 
                     case "Search from youtube":
@@ -94,14 +92,8 @@ namespace BIA_
                         break;
 
                     case "Shutdown my workstation":
-                        if (Program.admin == true)
-                        {
-                            Process.Start("shutdown", "/s /t 1");
-                            Environment.Exit(0);
-                        }
-                        if (Program.admin == false)
-                            Program.speaker.Speak("I am sorry, but you do not have admin permissions. Operation aborted.");
-                        break;                 
+                        Workstation.shutdown();
+                        break;
 
                     case "What is the current version":
                         Console.WriteLine("V 0.3.2");
@@ -110,7 +102,6 @@ namespace BIA_
 
                     case "Bye bye":
                     case "Exit the application":
-                        Program.reconized = "";
                         Quit.quit();
                         break;
 
@@ -150,6 +141,10 @@ namespace BIA_
                         Spotify.NextSong();
                         break;
 
+                    case "Show my current game stats":
+                        Process.Start("http://eune.op.gg/summoner/userName=docstrac#");
+                        break;
+
                     case "Previous song":
                         Spotify.PreviousSong();
                         break;
@@ -173,9 +168,10 @@ namespace BIA_
                         {
                             Console.WriteLine("I'm sorry, but i'm not able to execute that command");
                             Program.speaker.Speak("I'm sorry, but i'm not able to execute that command");
+                            Program.reconized = "";
                             break;
                         }
-                            
+
 
                 }
                 if (!String.IsNullOrEmpty(Program.reconized))
