@@ -8,6 +8,7 @@ Revoke admin permissions
 Change language
 Hey mate
 Show my current game stats
+Everything is fine now, you can stop that
 What can you do
 I am the admin
 Set school day alarm

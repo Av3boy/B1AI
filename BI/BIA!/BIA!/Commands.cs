@@ -26,6 +26,18 @@ namespace BIA_
                 while (heyb1 == false)
                 {
 
+                    if (Program.reconized == "Hey mate" && Program.wrongpassword == true)
+                    {
+                        Program.speaker.Speak("Admin identity cannot be confirmed, please enter password !");
+
+                        if (Program.reconized == "Everything is fine now, you can stop that")
+                        {
+                            Program.reconized = "";
+                            Program.wrongpassword = false;
+
+                        }
+                    }
+
                     if (Program.reconized == "Hey mate")
                     {
                         Program.reconized = "";
@@ -62,7 +74,7 @@ namespace BIA_
 
                     case "Clear console":
                         Console.Clear();
-                        Program.Main();
+                        Welcome.welcome();
                         break;
 
                     case "Set school day alarm":
@@ -110,13 +122,16 @@ namespace BIA_
                         break;
 
                     case "Revoke admin permissions":
+                        if (Program.admin == false)
+                        {
+                            Program.speaker.Speak("Command cannot be executed because your identity is not identified, operation aborted.");
+                        }
                         if (Program.admin == true)
                         {
                             Program.speaker.Speak("Admin permissions revoked");
                             Program.admin = false;
+                            Program.adminpasswordstring = "";
                         }
-                        if (Program.admin == false)
-                            Program.speaker.Speak("Command cannot be executed because you are not admin, operation aborted.");
                         break;
 
                     case "What time is it":
@@ -185,8 +200,7 @@ namespace BIA_
 
         public static void DisplayTimeEvent(object source, ElapsedEventArgs e)
         {
-            string CurrentTime = DateTime.Now.ToString("h:mm:ss");
-            if (Program.AlarmTime == CurrentTime)
+            if (Program.AlarmTime == Program.CurrentTime)
                 AlarmClock.alarm();
         }
     }
