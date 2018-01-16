@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace BIA_
 {
@@ -42,7 +38,7 @@ namespace BIA_
                 string username = File.ReadLines(Program.configpath).First();
                 Console.WriteLine("Hello " + username + "! How i can help you today ?");
                 Console.WriteLine("As you already know, type 'help' to see available commands.");
-                Program.speaker.SpeakAsync("Hello " + username + "! How i can help you today ?");
+                Program.speaker.SpeakAsync("Hello " + username + "! How can I help you today ?");
                 Commands.commands();
             }
         }

@@ -52,7 +52,7 @@ namespace BIA_
                 while (SchoolAlarm == false)
                 {
 
-                    if(Program.reconized == "yes" || Program.reconized == "yes i have" || Program.reconized == "yeah")
+                    if (Program.Yes.Contains(Program.reconized, StringComparer.OrdinalIgnoreCase))
                     {
                         Program.speaker.Speak("Okay, choose your morning template !");
                         Program.speaker.Speak("First option is that I want to drink coffee and smoke cigarette in the balcony");
@@ -62,7 +62,8 @@ namespace BIA_
                         SchoolAlarm = true;
                         continue;
                     }
-                    if (Program.reconized == "no" || Program.reconized == "hell no" || Program.reconized == "nope")
+
+                    else if (Program.Yes.Contains(Program.reconized, StringComparer.OrdinalIgnoreCase))
                     {
                         Program.speaker.Speak("Okay, choose your morning template !");
                         Program.speaker.Speak("First option is that I want to drink coffee and smoke cigarette in the balcony");

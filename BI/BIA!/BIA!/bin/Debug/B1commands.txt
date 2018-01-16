@@ -11,6 +11,7 @@ Show my current game stats
 Everything is fine now, you can stop that
 What can you do
 I am the admin
+Search porn
 Set school day alarm
 What time is it
 Exit the application
@@ -24,22 +25,42 @@ Chromosome alert
 Shutdown my workstation
 Wake me up at morning
 		//Answers
-Hell no
+HELLO B1
 Alex is gay
+		//YES
 Yeah
 Yes i want
 Yes i have
-Nope
-27255374
-123
-No
 Yes
 Sure
 Yes i can
-I think its first option
-I think its second option
-I think its third option
-I think its fourth option
+Yes
+Yea
+Ok
+Okey-dokey
+Oy all means
+Affirmative
+Aye aye
+Roger
+Uh-huh
+Righto
+Very well
+Yup
+Yuppers
+Right ons
+Surely
+Amen
+Totally
+Sure
+Yessir
+Hell no
+Not this time
+Maybe another time.
+I wish I were able to.
+Not now
+Nope
+Hell no
+No
 		//Lot of numbers
 00
 1
@@ -102,3 +123,4 @@ I think its fourth option
 58
 59
 123
+27255374

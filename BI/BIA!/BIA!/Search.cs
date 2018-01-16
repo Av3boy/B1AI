@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BIA_
 {
@@ -19,7 +15,7 @@ namespace BIA_
             Process.Start("https://www.google.fi/search?q=" + searchInput);
 
         }
-        public static void Pornoo()
+        public static void Porn()
         {
             Console.WriteLine("Select Category:");
             Console.WriteLine("MILF");

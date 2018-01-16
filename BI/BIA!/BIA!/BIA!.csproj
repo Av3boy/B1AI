@@ -67,17 +67,12 @@
   <ItemGroup>
     <Compile Include="AdminIdentity.cs" />
     <Compile Include="AlarmClock.cs" />
-    <Compile Include="ChromosomeAlert.cs" />
     <Compile Include="Commands.cs" />
+    <Compile Include="DifferentStuff.cs" />
     <Compile Include="Language.cs" />
-    <Compile Include="Led.cs" />
-    <Compile Include="PrintCommands.cs" />
-    <Compile Include="Quit.cs" />
     <Compile Include="SpeechRecognition.cs" />
-    <Compile Include="Spotify.cs" />
+    <Compile Include="Timers.cs" />
     <Compile Include="Welcome.cs" />
-    <Compile Include="Calculator.cs" />
-    <Compile Include="Hey.cs" />
     <Compile Include="Search.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
