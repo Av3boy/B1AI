@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Media;
-using System.Text;
 using System.Timers;
 
 namespace BIA_
@@ -26,19 +23,14 @@ namespace BIA_
                 while (heyb1 == false)
                 {
 
-                    if (Program.reconized == "Hey mate" && Program.wrongpassword == true)
+                    if (Program.reconized == "Hey mate" && Program.WrongPassword == true)
                     {
-                        Program.speaker.Speak("Admin identity cannot be confirmed, please enter password !");
-
-                        if (Program.reconized == "Everything is fine now, you can stop that")
-                        {
-                            Program.reconized = "";
-                            Program.wrongpassword = false;
-
-                        }
+                        Program.reconized = "";
+                        Program.speaker.Speak("Admin identity cannot be confirmed.");
+                        AdminIdentity.check();
                     }
 
-                    if (Program.reconized == "Hey mate")
+                    if (Program.reconized == "Hey mate" && Program.WrongPassword == false)
                     {
                         Program.reconized = "";
                         heyb1 = true;
@@ -62,7 +54,7 @@ namespace BIA_
 
                     case "Chromosome alert":
                     case "I have some relationship people over here":
-                        ChromosomeAlert.player();
+                        DifferentStuff.ChromosomeAlert();
                         break;
 
                     case "Change username":
@@ -95,8 +87,7 @@ namespace BIA_
                         break;
 
                     case "What can you do":
-                        Console.WriteLine();
-                        PrintCommands.commands();
+                        DifferentStuff.PrintCommands();
                         break;
 
                     case "I am the admin":
@@ -114,11 +105,11 @@ namespace BIA_
 
                     case "Bye bye":
                     case "Exit the application":
-                        Quit.quit();
+                        DifferentStuff.quit();
                         break;
 
-                    case "Pornoo":
-                        Search.Pornoo();
+                    case "Search porn":
+                        Search.Porn();
                         break;
 
                     case "Revoke admin permissions":
@@ -130,7 +121,7 @@ namespace BIA_
                         {
                             Program.speaker.Speak("Admin permissions revoked");
                             Program.admin = false;
-                            Program.adminpasswordstring = "";
+                            Program.AdminIdentity = false;
                         }
                         break;
 
@@ -140,7 +131,7 @@ namespace BIA_
                         break;
 
                     case "Open calculator":
-                        Calculator.calculator();
+                        DifferentStuff.calculator();
                         break;
 
                     case "Change language":
@@ -173,20 +164,12 @@ namespace BIA_
                         break;
 
                     default:
-                        if (Program.helloB1.Contains(Program.reconized, StringComparer.OrdinalIgnoreCase))
-                        {
-                            Hey.hey();
-                            break;
-                        }
-
-                        else
                         {
                             Console.WriteLine("I'm sorry, but i'm not able to execute that command");
                             Program.speaker.Speak("I'm sorry, but i'm not able to execute that command");
                             Program.reconized = "";
                             break;
                         }
-
 
                 }
                 if (!String.IsNullOrEmpty(Program.reconized))
