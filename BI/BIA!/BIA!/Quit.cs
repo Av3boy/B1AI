@@ -10,21 +10,21 @@ namespace BIA_
     {
         public static void quit()
         {
+            bool quit = false;
 
             Program.speaker.Speak("Are you sure you want to close the program.");
 
             Program.reconized = "";
 
-            while (Program.reconized == "")
+            while (quit == false)
             {
                 if (Program.reconized == "Yes")
                 {
                     Environment.Exit(0);
                 }
-
-                else if(Program.reconized == "No")
+                else if (Program.reconized == "No")
                 {
-                    Program.Main();
+                    Commands.commands();
                 }
             }
         }

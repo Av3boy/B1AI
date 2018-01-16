@@ -16,12 +16,22 @@ namespace BIA_
     class Program
     {
 
+        public static bool wrongpassword = false;
         public static string AlarmTime = "";
         public static string activeLanguage = "English";
+        public static string adminpasswordstring = "";
+
+        public static string CurrentTime;
 
         public static Boolean admin = false;
 
+        public static Timer lockout = new Timer();
+
+        public static Timer Timer = new Timer();
+
         public static SpeechSynthesizer speaker = new SpeechSynthesizer();
+
+
 
         public static string reconized = string.Empty;
         public static string GetUsername = Environment.UserName;
@@ -32,10 +42,22 @@ namespace BIA_
         
         public static void Main()
         {
+            lockout.Interval = 5000;
+            lockout.Elapsed += new ElapsedEventHandler(AdminIdentity.DisplayTimeEvent);
+
+            Timer.Interval = 1000;
+            Timer.Elapsed += new ElapsedEventHandler(Program.GetTime);
+            Timer.Start();
+
             speaker.Rate = 1;
             speaker.Volume = 100;
-            Speech.speech();
+            SpeechRecognition.speech();
             Welcome.welcome();
+        }
+        public static void GetTime(object source, ElapsedEventArgs e)
+        {
+            Program.CurrentTime = DateTime.Now.ToString("h:mm:ss");
+            Console.WriteLine(Program.CurrentTime);
         }
     }
 }

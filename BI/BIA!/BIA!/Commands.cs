@@ -11,8 +11,6 @@ namespace BIA_
 {
     class Commands
     {
-        
-
         public static void commands()
         {
 
@@ -21,12 +19,24 @@ namespace BIA_
             alarmclock.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
             Boolean quitNow = false;
             Boolean heyb1 = false;
-            
+
             while (!quitNow)
             {
 
                 while (heyb1 == false)
                 {
+
+                    if (Program.reconized == "Hey mate" && Program.wrongpassword == true)
+                    {
+                        Program.speaker.Speak("Admin identity cannot be confirmed, please enter password !");
+
+                        if (Program.reconized == "Everything is fine now, you can stop that")
+                        {
+                            Program.reconized = "";
+                            Program.wrongpassword = false;
+
+                        }
+                    }
 
                     if (Program.reconized == "Hey mate")
                     {
@@ -40,7 +50,7 @@ namespace BIA_
 
                 while (String.IsNullOrEmpty(Program.reconized))
                 {
-                    if(!String.IsNullOrEmpty(Program.reconized))
+                    if (!String.IsNullOrEmpty(Program.reconized))
                         continue;
                 }
 
@@ -64,7 +74,7 @@ namespace BIA_
 
                     case "Clear console":
                         Console.Clear();
-                        Program.Main();
+                        Welcome.welcome();
                         break;
 
                     case "Set school day alarm":
@@ -77,7 +87,7 @@ namespace BIA_
                         break;
 
                     case "Test":
-                            Console.WriteLine("xxx");
+                        Console.WriteLine("xxx");
                         break;
 
                     case "Search from youtube":
@@ -94,14 +104,8 @@ namespace BIA_
                         break;
 
                     case "Shutdown my workstation":
-                        if (Program.admin == true)
-                        {
-                            Process.Start("shutdown", "/s /t 1");
-                            Environment.Exit(0);
-                        }
-                        if (Program.admin == false)
-                            Program.speaker.Speak("I am sorry, but you do not have admin permissions. Operation aborted.");
-                        break;                 
+                        Workstation.shutdown();
+                        break;
 
                     case "What is the current version":
                         Console.WriteLine("V 0.3.2");
@@ -110,7 +114,6 @@ namespace BIA_
 
                     case "Bye bye":
                     case "Exit the application":
-                        Program.reconized = "";
                         Quit.quit();
                         break;
 
@@ -119,13 +122,16 @@ namespace BIA_
                         break;
 
                     case "Revoke admin permissions":
+                        if (Program.admin == false)
+                        {
+                            Program.speaker.Speak("Command cannot be executed because your identity is not identified, operation aborted.");
+                        }
                         if (Program.admin == true)
                         {
                             Program.speaker.Speak("Admin permissions revoked");
                             Program.admin = false;
+                            Program.adminpasswordstring = "";
                         }
-                        if (Program.admin == false)
-                            Program.speaker.Speak("Command cannot be executed because you are not admin, operation aborted.");
                         break;
 
                     case "What time is it":
@@ -148,6 +154,10 @@ namespace BIA_
 
                     case "Next song":
                         Spotify.NextSong();
+                        break;
+
+                    case "Show my current game stats":
+                        Process.Start("http://eune.op.gg/summoner/userName=docstrac#");
                         break;
 
                     case "Previous song":
@@ -173,9 +183,10 @@ namespace BIA_
                         {
                             Console.WriteLine("I'm sorry, but i'm not able to execute that command");
                             Program.speaker.Speak("I'm sorry, but i'm not able to execute that command");
+                            Program.reconized = "";
                             break;
                         }
-                            
+
 
                 }
                 if (!String.IsNullOrEmpty(Program.reconized))
@@ -189,8 +200,7 @@ namespace BIA_
 
         public static void DisplayTimeEvent(object source, ElapsedEventArgs e)
         {
-            string CurrentTime = DateTime.Now.ToString("h:mm:ss");
-            if (Program.AlarmTime == CurrentTime)
+            if (Program.AlarmTime == Program.CurrentTime)
                 AlarmClock.alarm();
         }
     }

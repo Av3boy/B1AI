@@ -25,6 +25,8 @@ namespace BIA_
             Console.WriteLine("MILF");
             Console.WriteLine("Gay");
             Console.WriteLine("Lesbian");
+            Console.WriteLine("BBC");
+            Console.WriteLine("");
             string searchInput = Console.ReadLine();
             Process.Start("https://www.pornhub.com/video/search?search=" + searchInput);
         }
