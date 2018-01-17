@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Media;
 using System.Timers;
 
@@ -23,14 +24,14 @@ namespace BIA_
                 while (heyb1 == false)
                 {
 
-                    if (Program.reconized == "Hey mate" && Program.WrongPassword == true)
+                    if (Program.Hey.Contains(Program.reconized) && Program.WrongPassword == true)
                     {
                         Program.reconized = "";
                         Program.speaker.Speak("Admin identity cannot be confirmed.");
                         AdminIdentity.check();
                     }
 
-                    if (Program.reconized == "Hey mate" && Program.WrongPassword == false)
+                    if (Program.Hey.Contains(Program.reconized) && Program.WrongPassword == false)
                     {
                         Program.reconized = "";
                         heyb1 = true;
@@ -62,6 +63,10 @@ namespace BIA_
                         File.Delete(path);
                         Console.Clear();
                         Welcome.welcome();
+                        break;
+
+                    case "What is my name ?":
+                        Program.speaker.Speak("I think your name is" + Program.Username);
                         break;
 
                     case "Clear console":
@@ -127,7 +132,7 @@ namespace BIA_
 
                     case "What time is it":
                         Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt"));
-                        Program.speaker.Speak(DateTime.Now.ToString("h:mm:ss tt"));
+                        Program.speaker.Speak(DateTime.Now.ToString("h.mm tt"));
                         break;
 
                     case "Open calculator":
@@ -141,6 +146,11 @@ namespace BIA_
                     case "Wake me up at morning":
                         alarmclock.Start();
                         AlarmClock.SetCustomAlarm();
+                        break;
+
+                    case "Set school alarm":
+                        alarmclock.Start();
+                        AlarmClock.SetSchoolAlarm();
                         break;
 
                     case "Next song":

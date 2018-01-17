@@ -35,10 +35,10 @@ namespace BIA_
 
             if (File.Exists(Program.configpath))
             {
-                string username = File.ReadLines(Program.configpath).First();
-                Console.WriteLine("Hello " + username + "! How i can help you today ?");
+                Program.Username = File.ReadLines(Program.configpath).First();
+                Console.WriteLine("Hello " + Program.Username+ "! How i can help you today ?");
                 Console.WriteLine("As you already know, type 'help' to see available commands.");
-                Program.speaker.SpeakAsync("Hello " + username + "! How can I help you today ?");
+                Program.speaker.SpeakAsync("Hello " + Program.Username + "! How can I help you today ?");
                 Commands.commands();
             }
         }

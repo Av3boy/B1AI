@@ -1,12 +1,19 @@
 		//switch case commands
 Next song
+Set school alarm
 Previous song
 Stop music
 Resume music
 Bye bye
 Revoke admin permissions
 Change language
-Hey mate
+Hey Acton
+Hey Acton
+Hello Acton
+Hi Acton
+Are you there Acton
+What is my name ?
+Hey Acton, are you awake ?
 Show my current game stats
 Everything is fine now, you can stop that
 What can you do
@@ -61,6 +68,11 @@ Not now
 Nope
 Hell no
 No
+		//Alarm commands
+Both would be very nice
+Only coffee, not cigarette this time
+Only cigarette, not coffee at this time
+Just wake me up
 		//Lot of numbers
 00
 1
