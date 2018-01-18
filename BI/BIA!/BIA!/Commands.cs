@@ -65,8 +65,13 @@ namespace BIA_
                         Welcome.welcome();
                         break;
 
-                    case "What is my name ?":
-                        Program.speaker.Speak("I think your name is" + Program.Username);
+                    case "What is my name":
+                        if (!Program.admin)
+                        {
+                            Program.speaker.Speak("I think your name is" + Program.Username);
+                        }
+                        else
+                            Program.speaker.Speak("I think you are root");
                         break;
 
                     case "Clear console":

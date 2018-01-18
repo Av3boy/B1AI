@@ -1,19 +1,19 @@
 		//switch case commands
 Next song
 Set school alarm
-Previous song
+//Previous song
 Stop music
 Resume music
 Bye bye
 Revoke admin permissions
 Change language
-Hey Acton
-Hey Acton
-Hello Acton
-Hi Acton
-Are you there Acton
-What is my name ?
-Hey Acton, are you awake ?
+Hey B1
+Hey B1
+Hello B1
+Hi B1
+Are you there B1
+What is my name
+Hey B1, are you awake
 Show my current game stats
 Everything is fine now, you can stop that
 What can you do
