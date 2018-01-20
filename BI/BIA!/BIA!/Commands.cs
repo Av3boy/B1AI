@@ -21,17 +21,17 @@ namespace BIA_
             while (!quitNow)
             {
 
-                while (heyb1 == false)
+                while(!heyb1)
                 {
 
-                    if (Program.Hey.Contains(Program.reconized) && Program.WrongPassword == true)
+                    if (Program.Hey.Contains(Program.reconized) && Program.WrongPassword)
                     {
                         Program.reconized = "";
                         Program.speaker.Speak("Admin identity cannot be confirmed.");
                         AdminIdentity.check();
                     }
 
-                    if (Program.Hey.Contains(Program.reconized) && Program.WrongPassword == false)
+                    if (Program.Hey.Contains(Program.reconized) && !Program.WrongPassword)
                     {
                         Program.reconized = "";
                         heyb1 = true;
@@ -65,6 +65,8 @@ namespace BIA_
                         Welcome.welcome();
                         break;
 
+                    case "Who am i":
+                    case "Who i am":
                     case "What is my name":
                         if (!Program.admin)
                         {
