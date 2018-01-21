@@ -102,7 +102,7 @@ namespace BIA_
         public static void PrintCommands()
         {
 
-            string[] commands = new string[9] { "'help' to show this dialog.", "'changeusername' to change username.",
+            string[] commands = { "'help' to show this dialog.", "'changeusername' to change username.",
                 "'version' to show current version.",
                 "'quit' to close application.", "'time' to show current time.",
                 "'cal' to open calculator.", "'clear' to reset this window.",
@@ -123,7 +123,7 @@ namespace BIA_
 
             Program.reconized = "";
 
-            while (quit == false)
+            while(!quit)
             {
                 if (Program.Yes.Contains(Program.reconized, StringComparer.OrdinalIgnoreCase))
                 {

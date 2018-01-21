@@ -12,19 +12,19 @@ namespace BIA_
         public static void shutdown()
         {
 
-            if (Program.admin == true)
+            if (Program.admin)
             {
                 Program.speaker.Speak("Workstation will shutdown in few seconds.");
                 Process.Start("shutdown", "/s /t 10");
                 Environment.Exit(0);
             }
 
-            if (Program.admin == false)
+            if (!Program.admin)
             {
                 Program.speaker.Speak("I am sorry, but you are not confirmed your identity.");
                 Program.speaker.Speak("Do you want confirm your identity now ?");
 
-                while(Program.admin == false)
+                while(!Program.admin)
                 {
 
                     if (Program.Yes.Contains(Program.reconized, StringComparer.OrdinalIgnoreCase))

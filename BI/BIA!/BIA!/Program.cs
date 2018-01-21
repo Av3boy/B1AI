@@ -28,8 +28,7 @@ namespace BIA_
 
         public static string[] Yes = { "Yeah", "Yes i want", "Yes i have", "Yes", "Sure", "Yes i can", "Yea", "Okay", "Ok", "Okey-dokey", "Roger", "Righto", "Yup", "Right on", "Surely", "Amen", "Totally", "Yessir" };
         public static string[] No = { "Not this time.", "Not now.", "Nope", "Hell no", "Maybe another time.", "I wish I were able to." };
-        public static string[] Hey = { "Hey Acton", "Hello Acton", "Hi Acton", "Are you there Acton", "Hey Acton, are you awake ?" };
-
+        public static string[] Hey = { "Hey B1", "Hello B1", "Hi B1", "B1 are you there", "Hey B1, are you awake ?" };
         public static void Main()
         {
             speaker.Rate = 1;
@@ -37,7 +36,6 @@ namespace BIA_
             SpeechRecognition.speech();
             Timers.AtStartup();
             Welcome.welcome();
-            
         }
     }
 }

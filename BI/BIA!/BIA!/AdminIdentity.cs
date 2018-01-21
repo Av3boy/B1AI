@@ -12,7 +12,7 @@ namespace BIA_
             Program.speaker.Speak("Can you prove your identity?");
             Program.reconized = "";
 
-            while(Program.AdminIdentity == false)
+            while(!Program.AdminIdentity)
             {
                 if(Program.Yes.Contains(Program.reconized))
                 {
@@ -20,7 +20,7 @@ namespace BIA_
                     Program.speaker.Speak("You have 5 seconds to prove your identity before system lock you out permanently.");
                     Timers.lockout.Start();
 
-                    while(Program.AdminIdentity== false)
+                    while(!Program.AdminIdentity)
                     {
                         if (Program.reconized == "Alex is gay")
                         {
@@ -46,7 +46,7 @@ namespace BIA_
             Program.WrongPassword = true;
             Program.AdminIdentity = false;
             Program.reconized = "";
-            Program.speaker.Speak("Ídentity cannot be confirmed, ");
+            Program.speaker.Speak("Ídentity cannot be confirmed");
             Commands.commands();
         }
     }
