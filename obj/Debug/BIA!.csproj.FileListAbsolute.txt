@@ -27,3 +27,12 @@ D:\CSharp\B1AI\BI\BIA!\BIA!\bin\Debug\B1AI.exe
 D:\CSharp\B1AI\BI\BIA!\BIA!\bin\Debug\B1AI.pdb
 D:\CSharp\B1AI\BI\BIA!\BIA!\obj\Debug\B1AI.exe
 D:\CSharp\B1AI\BI\BIA!\BIA!\obj\Debug\B1AI.pdb
+D:\CSharp\B1AI\bin\Debug\Alert.wav
+D:\CSharp\B1AI\bin\Debug\B1commands.txt
+D:\CSharp\B1AI\bin\Debug\pop.wav
+D:\CSharp\B1AI\bin\Debug\B1AI.exe.config
+D:\CSharp\B1AI\bin\Debug\B1AI.exe
+D:\CSharp\B1AI\bin\Debug\B1AI.pdb
+D:\CSharp\B1AI\obj\Debug\BIA!.csprojAssemblyReference.cache
+D:\CSharp\B1AI\obj\Debug\B1AI.exe
+D:\CSharp\B1AI\obj\Debug\B1AI.pdb
