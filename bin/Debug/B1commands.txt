@@ -1,0 +1,139 @@
+		//switch case commands
+Next song
+Set school alarm
+//Previous song
+Stop music
+Resume music
+Bye bye
+Revoke admin permissions
+Change language
+Hey B1
+Hey B1
+Hello B1
+Hi B1
+Are you there B1
+What is my name
+Hey B1, are you awake
+Show my current game stats
+Everything is fine now, you can stop that
+What can you do
+I am the admin
+Search porn
+Set school day alarm
+What time is it
+Exit the application
+Shut the fuck up
+Search from google
+Search from youtube
+Open calculator
+What is the current version
+Clear console
+Chromosome alert
+Shutdown my workstation
+Wake me up at morning
+		//Answers
+HELLO B1
+Alex is gay
+		//YES
+Yeah
+Yes i want
+Yes i have
+Yes
+Sure
+Yes i can
+Yes
+Yea
+Ok
+Okey-dokey
+Oy all means
+Affirmative
+Aye aye
+Roger
+Uh-huh
+Righto
+Very well
+Yup
+Yuppers
+Right ons
+Surely
+Amen
+Totally
+Sure
+Yessir
+Hell no
+Not this time
+Maybe another time.
+Who am i
+Who i am
+I wish I were able to.
+Not now
+Nope
+Hell no
+No
+		//Alarm commands
+Both would be very nice
+Only coffee, not cigarette this time
+Only cigarette, not coffee at this time
+Just wake me up
+		//Lot of numbers
+00
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+123
